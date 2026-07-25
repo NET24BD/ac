@@ -5,11 +5,19 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="theme-color" content="#ffffff">
+<meta
+name="theme-color"
+content="#0b1220"
+>
 
-<title>My Account | LINK4 COMMUNICATION</title>
+<title>
+My Account | LINK4 COMMUNICATION
+</title>
 
 
 <style>
@@ -25,20 +33,17 @@
 }
 
 
-/* =====================================================
-   BODY
-===================================================== */
-
 body{
 
     font-family:
-    "Segoe UI",
+    Inter,
     Arial,
+    Helvetica,
     sans-serif;
 
-    background:#f6f8fb;
+    background:#f5f7fb;
 
-    color:#1f2937;
+    color:#172033;
 
     min-height:100vh;
 
@@ -46,17 +51,19 @@ body{
 
 
 /* =====================================================
-   NAVBAR
+   TOP NAVBAR
 ===================================================== */
 
-.navbar{
+.topbar{
+
+    width:100%;
 
     height:72px;
 
     background:#ffffff;
 
     border-bottom:
-    1px solid #e5e7eb;
+    1px solid #e7ebf2;
 
     display:flex;
 
@@ -65,7 +72,7 @@ body{
     justify-content:space-between;
 
     padding:
-    0 40px;
+    0 35px;
 
     position:sticky;
 
@@ -93,16 +100,16 @@ body{
 
     height:42px;
 
-    border-radius:11px;
+    border-radius:12px;
 
     background:
     linear-gradient(
         135deg,
         #0f766e,
-        #14b8a6
+        #16a34a
     );
 
-    color:#ffffff;
+    color:white;
 
     display:flex;
 
@@ -110,57 +117,51 @@ body{
 
     justify-content:center;
 
-    font-size:17px;
+    font-size:18px;
 
     font-weight:800;
 
 }
 
 
-.brand-name{
+.brand-text{
 
     font-size:18px;
 
-    font-weight:700;
+    font-weight:800;
 
     color:#111827;
+
+    letter-spacing:.3px;
 
 }
 
 
-.dashboard-btn{
+.back-btn{
 
     text-decoration:none;
 
-    color:#374151;
+    color:#334155;
 
-    background:#ffffff;
-
-    border:
-    1px solid #e5e7eb;
+    background:#f1f5f9;
 
     padding:
     10px 17px;
 
-    border-radius:9px;
+    border-radius:10px;
 
     font-size:14px;
 
     font-weight:600;
 
-    transition:
-    0.25s;
+    transition:.2s;
 
 }
 
 
-.dashboard-btn:hover{
+.back-btn:hover{
 
-    background:#f0fdfa;
-
-    border-color:#14b8a6;
-
-    color:#0f766e;
+    background:#e2e8f0;
 
 }
 
@@ -171,61 +172,30 @@ body{
 
 .container{
 
-    max-width:1150px;
+    width:
+    min(
+        1180px,
+        calc(100% - 32px)
+    );
 
-    margin:auto;
-
-    padding:
-    38px 24px 60px;
-
-}
-
-
-/* =====================================================
-   PAGE TITLE
-===================================================== */
-
-.page-header{
-
-    margin-bottom:28px;
-
-}
-
-
-.page-title{
-
-    font-size:30px;
-
-    font-weight:750;
-
-    color:#111827;
-
-}
-
-
-.page-subtitle{
-
-    margin-top:7px;
-
-    color:#6b7280;
-
-    font-size:14px;
+    margin:
+    35px auto 60px;
 
 }
 
 
 /* =====================================================
-   PROFILE HEADER
+   PROFILE HERO
 ===================================================== */
 
-.profile-card{
+.profile-hero{
 
     background:#ffffff;
 
     border:
-    1px solid #e5e7eb;
+    1px solid #e7ebf2;
 
-    border-radius:18px;
+    border-radius:22px;
 
     padding:30px;
 
@@ -236,8 +206,13 @@ body{
     gap:25px;
 
     box-shadow:
-    0 8px 25px
-    rgba(15,23,42,0.05);
+    0 10px 35px
+    rgba(
+        15,
+        23,
+        42,
+        .06
+    );
 
     margin-bottom:25px;
 
@@ -246,57 +221,28 @@ body{
 
 .profile-picture{
 
-    width:100px;
+    width:110px;
 
-    height:100px;
+    height:110px;
 
-    border-radius:20px;
+    border-radius:50%;
 
     object-fit:cover;
 
-    background:
-    linear-gradient(
-        135deg,
-        #0f766e,
-        #14b8a6
-    );
-
     border:
-    4px solid #ffffff;
+    5px solid #ffffff;
 
     box-shadow:
-    0 5px 18px
-    rgba(15,118,110,0.20);
-
-}
-
-
-.profile-placeholder{
-
-    width:100px;
-
-    height:100px;
-
-    border-radius:20px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #0f766e,
-        #14b8a6
+    0 0 0 2px #16a34a,
+    0 10px 25px
+    rgba(
+        15,
+        23,
+        42,
+        .15
     );
 
-    color:#ffffff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:34px;
-
-    font-weight:700;
+    background:#f1f5f9;
 
 }
 
@@ -310,46 +256,49 @@ body{
 
 .profile-name{
 
-    font-size:26px;
+    font-size:28px;
 
-    font-weight:750;
+    font-weight:800;
 
     color:#111827;
 
+    margin-bottom:7px;
+
 }
 
 
-.profile-role{
-
-    margin-top:5px;
+.profile-username{
 
     font-size:14px;
 
-    color:#0f766e;
+    color:#64748b;
 
-    font-weight:600;
+    margin-bottom:14px;
 
 }
 
 
-.status{
+.profile-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+
+.badge{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:7px;
-
-    margin-top:12px;
-
     padding:
-    6px 12px;
+    7px 12px;
 
     border-radius:20px;
-
-    background:#ecfdf5;
-
-    color:#047857;
 
     font-size:12px;
 
@@ -358,44 +307,29 @@ body{
 }
 
 
-.status-dot{
+.role-badge{
 
-    width:7px;
+    background:#ecfdf5;
 
-    height:7px;
+    color:#047857;
 
-    border-radius:50%;
+}
 
-    background:#10b981;
+
+.status-badge{
+
+    background:#eff6ff;
+
+    color:#2563eb;
 
 }
 
 
 /* =====================================================
-   SECTION
+   SECTION TITLE
 ===================================================== */
 
-.section{
-
-    background:#ffffff;
-
-    border:
-    1px solid #e5e7eb;
-
-    border-radius:18px;
-
-    padding:28px;
-
-    margin-bottom:25px;
-
-    box-shadow:
-    0 6px 22px
-    rgba(15,23,42,0.04);
-
-}
-
-
-.section-header{
+.section-title{
 
     display:flex;
 
@@ -403,74 +337,85 @@ body{
 
     justify-content:space-between;
 
-    border-bottom:
-    1px solid #eef0f3;
-
-    padding-bottom:18px;
-
-    margin-bottom:22px;
+    margin:
+    30px 0 15px;
 
 }
 
 
-.section-title{
+.section-title h2{
 
-    font-size:19px;
-
-    font-weight:750;
+    font-size:21px;
 
     color:#111827;
 
 }
 
 
-.section-subtitle{
+.section-title span{
 
     font-size:12px;
 
-    color:#9ca3af;
+    color:#94a3b8;
 
 }
 
 
 /* =====================================================
-   INFO GRID
+   PERSONAL INFORMATION
 ===================================================== */
+
+.info-card{
+
+    background:#ffffff;
+
+    border:
+    1px solid #e7ebf2;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:
+    0 8px 30px
+    rgba(
+        15,
+        23,
+        42,
+        .04
+    );
+
+}
+
 
 .info-grid{
 
     display:grid;
 
     grid-template-columns:
-    repeat(2,1fr);
+    repeat(
+        2,
+        minmax(
+            0,
+            1fr
+        )
+    );
 
     gap:15px;
 
 }
 
 
-.info-box{
+.info-item{
 
-    background:#f9fafb;
+    background:#f8fafc;
 
     border:
-    1px solid #eef0f2;
+    1px solid #eef2f7;
 
-    border-radius:12px;
+    padding:16px;
 
-    padding:17px;
-
-    transition:
-    0.25s;
-
-}
-
-
-.info-box:hover{
-
-    background:#f0fdfa;
-
-    border-color:#99f6e4;
+    border-radius:13px;
 
 }
 
@@ -479,16 +424,15 @@ body{
 
     font-size:11px;
 
-    font-weight:700;
-
-    color:#9ca3af;
-
     text-transform:uppercase;
 
-    letter-spacing:
-    0.5px;
+    letter-spacing:.7px;
 
-    margin-bottom:7px;
+    color:#94a3b8;
+
+    font-weight:700;
+
+    margin-bottom:6px;
 
 }
 
@@ -499,44 +443,80 @@ body{
 
     font-weight:600;
 
-    color:#1f2937;
+    color:#1e293b;
 
     word-break:break-word;
 
 }
 
 
+.empty-value{
+
+    color:#cbd5e1;
+
+    font-weight:500;
+
+}
+
+
 /* =====================================================
-   COLLABORATION GRID
+   COLLABORATION SECTION
 ===================================================== */
+
+#collaborationSection{
+
+    display:none;
+
+}
+
 
 .collaboration-grid{
 
     display:grid;
 
     grid-template-columns:
-    repeat(3,1fr);
+    repeat(
+        auto-fit,
+        minmax(
+            280px,
+            1fr
+        )
+    );
 
-    gap:18px;
+    gap:20px;
 
 }
 
 
+/* =====================================================
+   COLLABORATION CARD
+===================================================== */
+
 .collaboration-card{
-
-    border:
-    1px solid #e5e7eb;
-
-    border-radius:15px;
 
     background:#ffffff;
 
-    overflow:hidden;
+    border:
+    1px solid #e7ebf2;
 
-    cursor:pointer;
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:
+    0 8px 30px
+    rgba(
+        15,
+        23,
+        42,
+        .05
+    );
 
     transition:
-    0.3s ease;
+    transform .25s,
+    box-shadow .25s;
+
+    cursor:pointer;
 
 }
 
@@ -544,130 +524,193 @@ body{
 .collaboration-card:hover{
 
     transform:
-    translateY(-4px);
-
-    border-color:#99f6e4;
+    translateY(
+        -5px
+    );
 
     box-shadow:
-    0 12px 30px
-    rgba(15,118,110,0.10);
+    0 15px 40px
+    rgba(
+        15,
+        23,
+        42,
+        .10
+    );
 
 }
 
 
-.company-logo-area{
+/* =====================================================
+   COMPANY HEADER
+===================================================== */
 
-    height:130px;
-
-    background:#f8fafc;
+.company-header{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
+    gap:15px;
 
-    padding:20px;
+    padding-bottom:18px;
+
+    border-bottom:
+    1px solid #eef2f7;
 
 }
 
 
 .company-logo{
 
-    max-width:150px;
+    width:62px;
 
-    max-height:90px;
+    height:62px;
 
-    object-fit:contain;
+    border-radius:14px;
 
-}
+    object-fit:cover;
 
+    background:#f1f5f9;
 
-.company-logo-placeholder{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:15px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #0f766e,
-        #14b8a6
-    );
-
-    color:#ffffff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:25px;
-
-    font-weight:700;
-
-}
-
-
-.company-info{
-
-    padding:18px;
+    border:
+    1px solid #e2e8f0;
 
 }
 
 
 .company-name{
 
-    font-size:16px;
+    font-size:17px;
 
-    font-weight:750;
+    font-weight:800;
 
     color:#111827;
-
-    margin-bottom:6px;
 
 }
 
 
 .collaboration-label{
 
-    font-size:12px;
+    font-size:11px;
 
-    color:#6b7280;
-
-}
-
-
-.view-details{
-
-    margin-top:14px;
-
-    color:#0f766e;
-
-    font-size:12px;
+    color:#16a34a;
 
     font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    margin-bottom:4px;
 
 }
 
 
 /* =====================================================
-   EMPTY
+   EMPLOYEE
 ===================================================== */
 
-.empty{
+.employee-section{
 
-    text-align:center;
+    display:flex;
 
-    padding:35px 15px;
+    align-items:center;
 
-    color:#9ca3af;
+    gap:14px;
 
-    font-size:14px;
+    margin-top:18px;
+
+}
+
+
+.employee-picture{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#f1f5f9;
+
+    border:
+    2px solid #ffffff;
+
+    box-shadow:
+    0 0 0 1px #e2e8f0;
+
+}
+
+
+.employee-details{
+
+    flex:1;
+
+}
+
+
+.employee-id{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#334155;
+
+}
+
+
+.employee-role{
+
+    font-size:12px;
+
+    color:#94a3b8;
+
+    margin-top:3px;
+
+}
+
+
+/* =====================================================
+   COLLABORATION SINCE
+===================================================== */
+
+.collaboration-date{
+
+    margin-top:18px;
+
+    padding-top:15px;
+
+    border-top:
+    1px solid #eef2f7;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.date-label{
+
+    font-size:12px;
+
+    color:#94a3b8;
+
+}
+
+
+.date-value{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#16a34a;
 
 }
 
@@ -680,31 +723,31 @@ body{
 
     text-align:center;
 
-    padding:40px;
+    padding:60px 20px;
 
-    color:#6b7280;
+    color:#64748b;
 
 }
 
 
 .spinner{
 
-    width:32px;
+    width:38px;
 
-    height:32px;
+    height:38px;
 
     border:
-    3px solid #e5e7eb;
+    4px solid #e2e8f0;
 
-    border-top-color:#0f766e;
+    border-top-color:#16a34a;
 
     border-radius:50%;
 
+    animation:
+    spin 1s linear infinite;
+
     margin:
     0 auto 15px;
-
-    animation:
-    spin 0.8s linear infinite;
 
 }
 
@@ -714,7 +757,9 @@ body{
     to{
 
         transform:
-        rotate(360deg);
+        rotate(
+            360deg
+        );
 
     }
 
@@ -722,371 +767,104 @@ body{
 
 
 /* =====================================================
-   MODAL
+   ERROR
 ===================================================== */
 
-.modal{
+.error-box{
 
     display:none;
 
-    position:fixed;
+    background:#fff1f2;
 
-    inset:0;
-
-    background:
-    rgba(15,23,42,0.60);
-
-    z-index:1000;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-
-}
-
-
-.modal.active{
-
-    display:flex;
-
-}
-
-
-.modal-box{
-
-    width:100%;
-
-    max-width:700px;
-
-    max-height:90vh;
-
-    overflow-y:auto;
-
-    background:#ffffff;
-
-    border-radius:20px;
-
-    box-shadow:
-    0 25px 70px
-    rgba(0,0,0,0.20);
-
-    animation:
-    modalOpen 0.25s ease;
-
-}
-
-
-@keyframes modalOpen{
-
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(15px)
-        scale(0.98);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-        translateY(0)
-        scale(1);
-
-    }
-
-}
-
-
-.modal-top{
-
-    position:relative;
-
-}
-
-
-.collaboration-picture{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-    display:none;
-
-}
-
-
-.modal-close{
-
-    position:absolute;
-
-    top:15px;
-
-    right:15px;
-
-    width:36px;
-
-    height:36px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:
-    rgba(255,255,255,0.92);
-
-    color:#374151;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    z-index:5;
-
-}
-
-
-.modal-content{
-
-    padding:28px;
-
-}
-
-
-.modal-company{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    margin-bottom:25px;
-
-}
-
-
-.modal-logo{
-
-    width:75px;
-
-    height:75px;
-
-    border-radius:15px;
-
-    object-fit:contain;
-
-    background:#f8fafc;
-
-    padding:10px;
+    color:#be123c;
 
     border:
-    1px solid #e5e7eb;
+    1px solid #fecdd3;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    margin-bottom:20px;
 
 }
 
 
-.modal-company-name{
+/* =====================================================
+   FOOTER
+===================================================== */
 
-    font-size:23px;
+.footer{
 
-    font-weight:750;
+    text-align:center;
 
-    color:#111827;
-
-}
-
-
-.modal-label{
+    color:#94a3b8;
 
     font-size:12px;
 
-    color:#9ca3af;
-
-    margin-top:5px;
-
-}
-
-
-.modal-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:14px;
-
-}
-
-
-.modal-info{
-
-    background:#f9fafb;
-
-    border:
-    1px solid #eef0f2;
-
-    padding:16px;
-
-    border-radius:11px;
-
-}
-
-
-.modal-info-label{
-
-    font-size:10px;
-
-    text-transform:uppercase;
-
-    font-weight:700;
-
-    color:#9ca3af;
-
-    margin-bottom:7px;
-
-}
-
-
-.modal-info-value{
-
-    font-size:14px;
-
-    font-weight:600;
-
-    color:#1f2937;
-
-    word-break:break-word;
+    margin-top:40px;
 
 }
 
 
 /* =====================================================
-   LOGOUT
+   RESPONSIVE
 ===================================================== */
 
-.logout-area{
+@media(
+    max-width:700px
+){
 
-    display:flex;
-
-    justify-content:flex-end;
-
-    margin-top:5px;
-
-}
-
-
-.logout-btn{
-
-    border:
-    1px solid #fecaca;
-
-    background:#ffffff;
-
-    color:#dc2626;
-
-    padding:
-    11px 22px;
-
-    border-radius:9px;
-
-    font-size:14px;
-
-    font-weight:650;
-
-    cursor:pointer;
-
-}
-
-
-.logout-btn:hover{
-
-    background:#fef2f2;
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:850px){
-
-    .collaboration-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-}
-
-
-@media(max-width:650px){
-
-    .navbar{
+    .topbar{
 
         padding:
-        0 18px;
+        0 16px;
 
     }
 
 
-    .brand-name{
+    .brand-text{
 
-        font-size:14px;
-
-    }
-
-
-    .dashboard-btn{
-
-        padding:
-        8px 11px;
-
-        font-size:12px;
+        font-size:15px;
 
     }
 
 
     .container{
 
-        padding:
-        25px 15px 45px;
+        width:
+        calc(
+            100% - 20px
+        );
+
+        margin-top:20px;
 
     }
 
 
-    .page-title{
+    .profile-hero{
 
-        font-size:24px;
-
-    }
-
-
-    .profile-card{
-
-        flex-direction:
-        column;
+        flex-direction:column;
 
         text-align:center;
 
-        padding:25px;
+        padding:25px 18px;
 
     }
 
 
-    .section{
+    .profile-badges{
 
-        padding:20px;
+        justify-content:center;
+
+    }
+
+
+    .profile-name{
+
+        font-size:23px;
 
     }
 
@@ -1099,25 +877,9 @@ body{
     }
 
 
-    .collaboration-grid{
+    .info-card{
 
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    .modal-grid{
-
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    .modal-content{
-
-        padding:20px;
+        padding:15px;
 
     }
 
@@ -1132,10 +894,11 @@ body{
 
 
 <!-- =====================================================
-     NAVBAR
+     TOP BAR
 ===================================================== -->
 
-<nav class="navbar">
+<header class="topbar">
+
 
     <div class="brand">
 
@@ -1145,7 +908,7 @@ body{
 
         </div>
 
-        <div class="brand-name">
+        <div class="brand-text">
 
             LINK4 COMMUNICATION
 
@@ -1155,225 +918,116 @@ body{
 
 
     <a
-        href="dashboard.html"
-        class="dashboard-btn"
+    href="dashboard.html"
+    class="back-btn"
     >
 
         ← Dashboard
 
     </a>
 
-</nav>
+
+</header>
 
 
 
 <!-- =====================================================
-     MAIN
+     MAIN CONTAINER
 ===================================================== -->
 
 <main class="container">
 
 
-    <div class="page-header">
+    <!-- ERROR -->
 
-        <div class="page-title">
+    <div
+    id="errorBox"
+    class="error-box"
+    ></div>
 
-            My Account
 
-        </div>
 
-        <div class="page-subtitle">
+    <!-- LOADING -->
 
-            View your account, personal information and collaboration profile
+    <div
+    id="loading"
+    class="loading"
+    >
 
-        </div>
+        <div class="spinner"></div>
+
+        Loading your account...
 
     </div>
 
 
 
     <!-- =================================================
-         PROFILE HEADER
+         PROFILE HERO
     ================================================== -->
 
-    <div class="profile-card">
+    <section
+    id="profileHero"
+    class="profile-hero"
+    style="display:none;"
+    >
 
 
-        <div id="profilePictureContainer">
-
-            <div
-                class="profile-placeholder"
-                id="profilePlaceholder"
-            >
-
-                U
-
-            </div>
-
-
-            <img
-                id="profilePicture"
-                class="profile-picture"
-                style="display:none;"
-                alt="Profile Picture"
-            >
-
-        </div>
+        <img
+        id="profilePicture"
+        class="profile-picture"
+        src=""
+        alt="Profile Picture"
+        >
 
 
         <div class="profile-info">
 
 
             <div
-                class="profile-name"
-                id="profileName"
+            id="profileName"
+            class="profile-name"
             >
 
-                Loading...
+                User
 
             </div>
 
 
             <div
-                class="profile-role"
-                id="profileRole"
+            id="profileUsername"
+            class="profile-username"
             >
 
-                Loading...
+                @username
 
             </div>
 
 
-            <div class="status">
+            <div
+            class="profile-badges"
+            >
 
 
-                <span class="status-dot"></span>
+                <span
+                id="profileRole"
+                class="badge role-badge"
+                >
 
-
-                <span id="profileStatus">
-
-                    Loading...
+                    Role
 
                 </span>
 
 
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- =================================================
-         ACCOUNT INFORMATION
-    ================================================== -->
-
-    <section class="section">
-
-
-        <div class="section-header">
-
-
-            <div class="section-title">
-
-                Account Information
-
-            </div>
-
-
-            <div class="section-subtitle">
-
-                Account Overview
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="info-grid">
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Name
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="name"
+                <span
+                id="profileStatus"
+                class="badge status-badge"
                 >
 
-                    Loading...
+                    Active
 
-                </div>
+                </span>
 
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Username
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="username"
-                >
-
-                    Loading...
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Role
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="role"
-                >
-
-                    Loading...
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Status
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="status"
-                >
-
-                    Loading...
-
-                </div>
 
             </div>
 
@@ -1389,242 +1043,29 @@ body{
          PERSONAL INFORMATION
     ================================================== -->
 
-    <section class="section">
+    <section
+    id="personalSection"
+    style="display:none;"
+    >
 
 
-        <div class="section-header">
+        <div class="section-title">
 
-
-            <div class="section-title">
-
+            <h2>
                 Personal Information
+            </h2>
 
-            </div>
-
-
-            <div class="section-subtitle">
-
-                Employee Profile
-
-            </div>
-
+            <span>
+                Account Details
+            </span>
 
         </div>
-
-
-
-        <div class="info-grid">
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Phone
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="phone"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Email
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="email"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Department
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="department"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Designation
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="designation"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Employee ID
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="employeeId"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Location
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="location"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Joining Date
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="joiningDate"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <div class="info-label">
-
-                    Address
-
-                </div>
-
-                <div
-                    class="info-value"
-                    id="address"
-                >
-
-                    -
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =================================================
-         COLLABORATION
-    ================================================== -->
-
-    <section class="section">
-
-
-        <div class="section-header">
-
-
-            <div class="section-title">
-
-                Our Collaboration Partners
-
-            </div>
-
-
-            <div class="section-subtitle">
-
-                Professional Collaboration
-
-            </div>
-
-
-        </div>
-
 
 
         <div
-            class="collaboration-grid"
-            id="collaborationGrid"
-        >
-
-            <div class="loading">
-
-                <div class="spinner"></div>
-
-                Loading collaboration information...
-
-            </div>
-
-        </div>
+        id="personalInformation"
+        class="info-card info-grid"
+        ></div>
 
 
     </section>
@@ -1632,19 +1073,46 @@ body{
 
 
     <!-- =================================================
-         LOGOUT
+         COLLABORATION PARTNERS
     ================================================== -->
 
-    <div class="logout-area">
+    <section
+    id="collaborationSection"
+    >
 
-        <button
-            class="logout-btn"
-            onclick="logout()"
-        >
 
-            Logout
+        <div class="section-title">
 
-        </button>
+            <h2>
+                Collaboration Partners
+            </h2>
+
+            <span>
+                Professional Collaboration
+            </span>
+
+        </div>
+
+
+        <div
+        id="collaborationGrid"
+        class="collaboration-grid"
+        ></div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        LINK4 COMMUNICATION
+
+        <br>
+
+        Professional Management System
 
     </div>
 
@@ -1653,190 +1121,10 @@ body{
 
 
 
-<!-- =====================================================
-     COLLABORATION MODAL
-===================================================== -->
-
-<div
-    class="modal"
-    id="collaborationModal"
->
-
-
-    <div class="modal-box">
-
-
-        <div class="modal-top">
-
-
-            <button
-                class="modal-close"
-                onclick="closeModal()"
-            >
-
-                ×
-
-            </button>
-
-
-            <img
-                id="modalCollaborationPicture"
-                class="collaboration-picture"
-                alt="Collaboration Picture"
-            >
-
-
-        </div>
-
-
-
-        <div class="modal-content">
-
-
-            <div class="modal-company">
-
-
-                <img
-                    id="modalCompanyLogo"
-                    class="modal-logo"
-                    alt="Company Logo"
-                >
-
-
-                <div>
-
-
-                    <div
-                        class="modal-company-name"
-                        id="modalCompanyName"
-                    >
-
-                        Company
-
-                    </div>
-
-
-                    <div class="modal-label">
-
-                        Collaboration Partner
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="modal-grid">
-
-
-                <div class="modal-info">
-
-
-                    <div class="modal-info-label">
-
-                        Employee Picture
-
-                    </div>
-
-
-                    <div class="modal-info-value">
-
-                        <img
-                            id="modalEmployeePicture"
-                            style="
-                            width:70px;
-                            height:70px;
-                            border-radius:12px;
-                            object-fit:cover;
-                            display:none;
-                            "
-                            alt="Employee Picture"
-                        >
-
-                        <span
-                            id="employeePictureText"
-                        >
-
-                            Available in profile
-
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="modal-info">
-
-
-                    <div class="modal-info-label">
-
-                        Employee ID
-
-                    </div>
-
-
-                    <div
-                        class="modal-info-value"
-                        id="modalEmployeeId"
-                    >
-
-                        -
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="modal-info">
-
-
-                    <div class="modal-info-label">
-
-                        Collaboration Since
-
-                    </div>
-
-
-                    <div
-                        class="modal-info-value"
-                        id="modalCollaborationSince"
-                    >
-
-                        -
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</div>
-
-
-
 <script>
 
-
 /* =====================================================
-   API
+   API URL
 ===================================================== */
 
 const API_URL =
@@ -1846,925 +1134,28 @@ const API_URL =
 
 
 /* =====================================================
-   LOGIN SECURITY
+   GET LOGGED USER
 ===================================================== */
 
-if(
+function getUsername(){
 
-    localStorage.getItem(
-        "loggedIn"
-    ) !== "true"
+    return (
 
-){
-
-    window.location.href =
-    "login.html";
-
-}
-
-
-
-/* =====================================================
-   LOGIN DATA
-===================================================== */
-
-const username =
-
-localStorage.getItem(
-    "username"
-) || "";
-
-
-const loginName =
-
-localStorage.getItem(
-    "name"
-) || "User";
-
-
-const loginRole =
-
-localStorage.getItem(
-    "role"
-) || "-";
-
-
-const loginStatus =
-
-localStorage.getItem(
-    "status"
-) || "-";
-
-
-
-/* =====================================================
-   INITIAL BASIC DATA
-===================================================== */
-
-setText(
-    "name",
-    loginName
-);
-
-setText(
-    "username",
-    username
-);
-
-setText(
-    "role",
-    loginRole
-);
-
-setText(
-    "status",
-    loginStatus
-);
-
-setText(
-    "profileName",
-    loginName
-);
-
-setText(
-    "profileRole",
-    loginRole
-);
-
-setText(
-    "profileStatus",
-    loginStatus
-);
-
-
-
-/* =====================================================
-   LOAD PROFILE
-===================================================== */
-
-function loadProfile(){
-
-
-    if(!username){
-
-        return;
-
-    }
-
-
-
-    const url =
-
-    API_URL +
-
-    "?action=profile&username=" +
-
-    encodeURIComponent(
-        username
-    );
-
-
-
-    fetch(url)
-
-    .then(
-        response =>
-        response.json()
-    )
-
-    .then(
-        data => {
-
-
-            if(
-                data.success !== true
-            ){
-
-                console.error(
-                    data.message
-                );
-
-                return;
-
-            }
-
-
-
-            /* =========================================
-               BASIC USER DATA
-            ========================================== */
-
-            setText(
-                "name",
-                data.name || loginName
-            );
-
-            setText(
-                "profileName",
-                data.name || loginName
-            );
-
-
-            setText(
-                "username",
-                data.username || username
-            );
-
-
-            setText(
-                "role",
-                data.role || loginRole
-            );
-
-            setText(
-                "profileRole",
-                data.role || loginRole
-            );
-
-
-            setText(
-                "status",
-                data.status || loginStatus
-            );
-
-            setText(
-                "profileStatus",
-                data.status || loginStatus
-            );
-
-
-
-            /* =========================================
-               PROFILE PICTURE
-            ========================================== */
-
-            const profile =
-
-            data.profile || {};
-
-
-            const profilePicture =
-
-            getValue(
-                profile,
-                [
-                    "Profile Picture",
-                    "ProfilePicture",
-                    "Picture",
-                    "Photo"
-                ]
-            );
-
-
-            if(profilePicture){
-
-                document
-                .getElementById(
-                    "profilePicture"
-                )
-                .src =
-                profilePicture;
-
-
-                document
-                .getElementById(
-                    "profilePicture"
-                )
-                .style.display =
-                "block";
-
-
-                document
-                .getElementById(
-                    "profilePlaceholder"
-                )
-                .style.display =
-                "none";
-
-            }
-
-            else{
-
-                document
-                .getElementById(
-                    "profilePlaceholder"
-                )
-                .innerText =
-
-                String(
-                    data.name ||
-                    loginName
-                )
-                .charAt(0)
-                .toUpperCase();
-
-            }
-
-
-
-            /* =========================================
-               PERSONAL INFORMATION
-            ========================================== */
-
-            setText(
-                "phone",
-                getValue(
-                    profile,
-                    [
-                        "Phone",
-                        "Phone Number"
-                    ]
-                )
-            );
-
-
-            setText(
-                "email",
-                getValue(
-                    profile,
-                    [
-                        "Email",
-                        "Gmail"
-                    ]
-                )
-            );
-
-
-            setText(
-                "department",
-                getValue(
-                    profile,
-                    [
-                        "Department"
-                    ]
-                )
-            );
-
-
-            setText(
-                "designation",
-                getValue(
-                    profile,
-                    [
-                        "Designation"
-                    ]
-                )
-            );
-
-
-            setText(
-                "employeeId",
-                getValue(
-                    profile,
-                    [
-                        "Employee ID",
-                        "EmployeeID",
-                        "ID"
-                    ]
-                )
-            );
-
-
-            setText(
-                "location",
-                getValue(
-                    profile,
-                    [
-                        "Location"
-                    ]
-                )
-            );
-
-
-            setText(
-                "joiningDate",
-                getValue(
-                    profile,
-                    [
-                        "Joining Date",
-                        "JoiningDate"
-                    ]
-                )
-            );
-
-
-            setText(
-                "address",
-                getValue(
-                    profile,
-                    [
-                        "Address"
-                    ]
-                )
-            );
-
-
-
-            /* =========================================
-               COLLABORATION
-            ========================================== */
-
-            renderCollaborations(
-                data.collaborations ||
-                []
-            );
-
-        }
-
-    )
-
-    .catch(
-
-        error => {
-
-            console.error(
-                "Profile Error:",
-                error
-            );
-
-            document
-            .getElementById(
-                "collaborationGrid"
-            )
-            .innerHTML =
-
-            '<div class="empty">Unable to load collaboration information.</div>';
-
-        }
-
-    );
-
-}
-
-
-
-/* =====================================================
-   RENDER COLLABORATIONS
-===================================================== */
-
-function renderCollaborations(
-    collaborations
-){
-
-
-    const grid =
-
-    document
-    .getElementById(
-        "collaborationGrid"
-    );
-
-
-    grid.innerHTML = "";
-
-
-
-    if(
-
-        !Array.isArray(
-            collaborations
+        localStorage.getItem(
+            "username"
         )
 
         ||
 
-        collaborations.length === 0
+        sessionStorage.getItem(
+            "username"
+        )
 
-    ){
+        ||
 
-        grid.innerHTML =
+        ""
 
-        '<div class="empty">No collaboration information available.</div>';
-
-        return;
-
-    }
-
-
-
-    collaborations.forEach(
-
-        function(
-            item
-        ){
-
-            const companyName =
-
-            item.companyName ||
-
-            item["Company Name"] ||
-
-            "-";
-
-
-            const companyLogo =
-
-            item.companyLogo ||
-
-            item["Company Logo"] ||
-
-            "";
-
-
-            const employeePicture =
-
-            item.employeePicture ||
-
-            item["Employee Picture"] ||
-
-            "";
-
-
-            const employeeId =
-
-            item.employeeId ||
-
-            item["Employee ID"] ||
-
-            "-";
-
-
-            const collaborationSince =
-
-            item.collaborationSince ||
-
-            item["Collaboration Since"] ||
-
-            "-";
-
-
-
-            const card =
-
-            document
-            .createElement(
-                "div"
-            );
-
-
-            card.className =
-
-            "collaboration-card";
-
-
-
-            let logoHTML;
-
-
-
-            if(companyLogo){
-
-                logoHTML =
-
-                `<img
-                    src="${escapeHTML(companyLogo)}"
-                    class="company-logo"
-                    alt="Company Logo"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-                >
-                <div
-                    class="company-logo-placeholder"
-                    style="display:none;"
-                >
-                    ${escapeHTML(
-                        companyName
-                        .charAt(0)
-                        .toUpperCase()
-                    )}
-                </div>`;
-
-            }
-
-            else{
-
-                logoHTML =
-
-                `<div class="company-logo-placeholder">
-                    ${escapeHTML(
-                        companyName
-                        .charAt(0)
-                        .toUpperCase()
-                    )}
-                </div>`;
-
-            }
-
-
-
-            card.innerHTML =
-
-            `
-
-            <div class="company-logo-area">
-
-                ${logoHTML}
-
-            </div>
-
-
-            <div class="company-info">
-
-                <div class="company-name">
-
-                    ${escapeHTML(
-                        companyName
-                    )}
-
-                </div>
-
-
-                <div class="collaboration-label">
-
-                    Collaboration Since:
-                    ${escapeHTML(
-                        collaborationSince
-                    )}
-
-                </div>
-
-
-                <div class="view-details">
-
-                    View Collaboration Details →
-
-                </div>
-
-            </div>
-
-            `;
-
-
-
-            card.onclick =
-
-            function(){
-
-                openModal(
-                    item
-                );
-
-            };
-
-
-
-            grid.appendChild(
-                card
-            );
-
-        }
-
-    );
-
-}
-
-
-
-/* =====================================================
-   OPEN MODAL
-===================================================== */
-
-function openModal(
-    item
-){
-
-
-    const companyName =
-
-    item.companyName ||
-
-    item["Company Name"] ||
-
-    "-";
-
-
-    const companyLogo =
-
-    item.companyLogo ||
-
-    item["Company Logo"] ||
-
-    "";
-
-
-    const employeePicture =
-
-    item.employeePicture ||
-
-    item["Employee Picture"] ||
-
-    "";
-
-
-    const employeeId =
-
-    item.employeeId ||
-
-    item["Employee ID"] ||
-
-    "-";
-
-
-    const collaborationSince =
-
-    item.collaborationSince ||
-
-    item["Collaboration Since"] ||
-
-    "-";
-
-
-
-    setText(
-        "modalCompanyName",
-        companyName
-    );
-
-
-    setText(
-        "modalEmployeeId",
-        employeeId
-    );
-
-
-    setText(
-        "modalCollaborationSince",
-        collaborationSince
-    );
-
-
-
-    const logo =
-
-    document
-    .getElementById(
-        "modalCompanyLogo"
-    );
-
-
-    if(companyLogo){
-
-        logo.src =
-        companyLogo;
-
-        logo.style.display =
-        "block";
-
-    }
-
-    else{
-
-        logo.style.display =
-        "none";
-
-    }
-
-
-
-    const collaborationPicture =
-
-    document
-    .getElementById(
-        "modalCollaborationPicture"
-    );
-
-
-    if(
-        item.collaborationPicture ||
-
-        item["Collaboration Picture"]
-    ){
-
-        collaborationPicture.src =
-
-        item.collaborationPicture ||
-
-        item["Collaboration Picture"];
-
-        collaborationPicture.style.display =
-        "block";
-
-    }
-
-    else{
-
-        collaborationPicture.style.display =
-        "none";
-
-    }
-
-
-
-    const employeeImg =
-
-    document
-    .getElementById(
-        "modalEmployeePicture"
-    );
-
-
-    const employeeText =
-
-    document
-    .getElementById(
-        "employeePictureText"
-    );
-
-
-
-    if(employeePicture){
-
-        employeeImg.src =
-        employeePicture;
-
-        employeeImg.style.display =
-        "block";
-
-        employeeText.style.display =
-        "none";
-
-    }
-
-    else{
-
-        employeeImg.style.display =
-        "none";
-
-        employeeText.style.display =
-        "inline";
-
-    }
-
-
-
-    document
-    .getElementById(
-        "collaborationModal"
-    )
-    .classList
-    .add(
-        "active"
-    );
-
-}
-
-
-
-/* =====================================================
-   CLOSE MODAL
-===================================================== */
-
-function closeModal(){
-
-    document
-    .getElementById(
-        "collaborationModal"
-    )
-    .classList
-    .remove(
-        "active"
-    );
-
-}
-
-
-
-/* =====================================================
-   CLICK OUTSIDE MODAL
-===================================================== */
-
-document
-.getElementById(
-    "collaborationModal"
-)
-.addEventListener(
-
-    "click",
-
-    function(e){
-
-        if(
-            e.target ===
-            this
-        ){
-
-            closeModal();
-
-        }
-
-    }
-
-);
-
-
-
-/* =====================================================
-   GET VALUE
-===================================================== */
-
-function getValue(
-    object,
-    keys
-){
-
-    for(
-
-        let i = 0;
-
-        i < keys.length;
-
-        i++
-
-    ){
-
-        if(
-
-            object &&
-            object[
-                keys[i]
-            ] !== undefined
-
-        ){
-
-            return object[
-                keys[i]
-            ];
-
-        }
-
-    }
-
-
-    return "-";
-
-}
-
-
-
-/* =====================================================
-   SET TEXT
-===================================================== */
-
-function setText(
-    id,
-    value
-){
-
-    const element =
-
-    document
-    .getElementById(
-        id
-    );
-
-
-    if(element){
-
-        element.innerText =
-
-        value ||
-
-        "-";
-
-    }
+    ).trim();
 
 }
 
@@ -2778,33 +1169,408 @@ function escapeHTML(
     value
 ){
 
+    if(
+        value === null ||
+        value === undefined
+    ){
+
+        return "";
+
+    }
+
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* =====================================================
+   IMAGE URL
+===================================================== */
+
+function getImageURL(
+    url
+){
+
+    if(
+        !url
+    ){
+
+        return "";
+
+    }
+
+
     return String(
-        value || ""
-    )
+        url
+    ).trim();
 
-    .replace(
-        /&/g,
-        "&amp;"
-    )
+}
 
-    .replace(
-        /</g,
-        "&lt;"
-    )
 
-    .replace(
-        />/g,
-        "&gt;"
-    )
 
-    .replace(
-        /"/g,
-        "&quot;"
-    )
+/* =====================================================
+   SHOW ERROR
+===================================================== */
 
-    .replace(
-        /'/g,
-        "&#039;"
+function showError(
+    message
+){
+
+    document
+    .getElementById(
+        "loading"
+    )
+    .style.display =
+    "none";
+
+
+    const box =
+
+    document
+    .getElementById(
+        "errorBox"
+    );
+
+
+    box.innerHTML =
+
+    escapeHTML(
+        message
+    );
+
+
+    box.style.display =
+    "block";
+
+}
+
+
+
+/* =====================================================
+   LOAD ACCOUNT
+===================================================== */
+
+async function loadAccount(){
+
+    try{
+
+
+        const username =
+        getUsername();
+
+
+        if(
+            !username
+        ){
+
+            showError(
+                "User session not found. Please login again."
+            );
+
+            return;
+
+        }
+
+
+        const url =
+
+        API_URL +
+
+        "?action=profile&username=" +
+
+        encodeURIComponent(
+            username
+        );
+
+
+        const response =
+
+        await fetch(
+            url,
+            {
+                method:
+                "GET",
+
+                cache:
+                "no-cache"
+            }
+        );
+
+
+        if(
+            !response.ok
+        ){
+
+            throw new Error(
+                "Unable to connect to server."
+            );
+
+        }
+
+
+        const data =
+
+        await response.json();
+
+
+        if(
+            !data.success
+        ){
+
+            throw new Error(
+
+                data.message ||
+
+                "Unable to load profile."
+
+            );
+
+        }
+
+
+        renderAccount(
+            data
+        );
+
+
+    }
+
+    catch(error){
+
+        console.error(
+            error
+        );
+
+
+        showError(
+
+            error.message ||
+
+            "Something went wrong."
+
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   RENDER ACCOUNT
+===================================================== */
+
+function renderAccount(
+    data
+){
+
+    /* -----------------------------------------------
+       HIDE LOADING
+    ------------------------------------------------ */
+
+    document
+    .getElementById(
+        "loading"
+    )
+    .style.display =
+    "none";
+
+
+    /* -----------------------------------------------
+       SHOW HERO
+    ------------------------------------------------ */
+
+    document
+    .getElementById(
+        "profileHero"
+    )
+    .style.display =
+    "flex";
+
+
+    /* -----------------------------------------------
+       BASIC INFORMATION
+    ------------------------------------------------ */
+
+    document
+    .getElementById(
+        "profileName"
+    )
+    .textContent =
+
+    data.name ||
+
+    data.profile?.Name ||
+
+    "User";
+
+
+    document
+    .getElementById(
+        "profileUsername"
+    )
+    .textContent =
+
+    "@" +
+
+    (
+        data.username ||
+
+        getUsername()
+
+    );
+
+
+    document
+    .getElementById(
+        "profileRole"
+    )
+    .textContent =
+
+    data.role ||
+
+    "User";
+
+
+    document
+    .getElementById(
+        "profileStatus"
+    )
+    .textContent =
+
+    data.status ||
+
+    "Active";
+
+
+
+    /* -----------------------------------------------
+       PROFILE PICTURE
+    ------------------------------------------------ */
+
+    const profile =
+
+    data.profile ||
+
+    {};
+
+
+    const profilePicture =
+
+    profile[
+        "Profile Picture"
+    ]
+
+    ||
+
+    profile[
+        "Prifile Picture"
+    ]
+
+    ||
+
+    profile[
+        "Profile picture"
+    ]
+
+    ||
+
+    profile[
+        "Prifile picture"
+    ]
+
+    ||
+
+    "";
+
+
+    const pictureElement =
+
+    document
+    .getElementById(
+        "profilePicture"
+    );
+
+
+    if(
+        profilePicture
+    ){
+
+        pictureElement.src =
+
+        getImageURL(
+            profilePicture
+        );
+
+    }
+
+    else{
+
+        pictureElement.src =
+
+        "https://ui-avatars.com/api/?name=" +
+
+        encodeURIComponent(
+
+            data.name ||
+
+            "User"
+
+        ) +
+
+        "&background=16a34a&color=fff&size=200";
+
+    }
+
+
+
+    /* -----------------------------------------------
+       PERSONAL INFORMATION
+    ------------------------------------------------ */
+
+    renderPersonalInformation(
+        profile
+    );
+
+
+
+    /* -----------------------------------------------
+       COLLABORATION
+    ------------------------------------------------ */
+
+    renderCollaborations(
+
+        data.collaborations ||
+
+        []
+
     );
 
 }
@@ -2812,17 +1578,418 @@ function escapeHTML(
 
 
 /* =====================================================
-   LOGOUT
+   RENDER PERSONAL INFORMATION
 ===================================================== */
 
-function logout(){
+function renderPersonalInformation(
+    profile
+){
 
-    localStorage.clear();
+    const section =
 
-    window.location.href =
-    "login.html";
+    document
+    .getElementById(
+        "personalSection"
+    );
+
+
+    const container =
+
+    document
+    .getElementById(
+        "personalInformation"
+    );
+
+
+    container.innerHTML =
+    "";
+
+
+    const hiddenKeys = [
+
+        "Profile Picture",
+
+        "Prifile Picture",
+
+        "Profile picture",
+
+        "Prifile picture"
+
+    ];
+
+
+    let count = 0;
+
+
+    Object
+    .keys(
+        profile
+    )
+    .forEach(
+
+        function(key){
+
+            if(
+
+                hiddenKeys
+                .includes(
+                    key
+                )
+
+            ){
+
+                return;
+
+            }
+
+
+            const value =
+
+            profile[
+                key
+            ];
+
+
+            container.innerHTML +=
+
+            `
+
+            <div class="info-item">
+
+                <div class="info-label">
+
+                    ${escapeHTML(key)}
+
+                </div>
+
+                <div class="info-value">
+
+                    ${
+                        value
+
+                        ?
+
+                        escapeHTML(
+                            value
+                        )
+
+                        :
+
+                        '<span class="empty-value">Not provided</span>'
+                    }
+
+                </div>
+
+            </div>
+
+            `;
+
+
+            count++;
+
+        }
+
+    );
+
+
+    if(
+        count > 0
+    ){
+
+        section.style.display =
+        "block";
+
+    }
 
 }
+
+
+
+/* =====================================================
+   RENDER UNLIMITED COLLABORATIONS
+===================================================== */
+
+function renderCollaborations(
+    collaborations
+){
+
+    const section =
+
+    document
+    .getElementById(
+        "collaborationSection"
+    );
+
+
+    const grid =
+
+    document
+    .getElementById(
+        "collaborationGrid"
+    );
+
+
+    grid.innerHTML =
+    "";
+
+
+    /* -----------------------------------------------
+       NO COLLABORATION
+    ------------------------------------------------ */
+
+    if(
+
+        !Array.isArray(
+            collaborations
+        )
+
+        ||
+
+        collaborations.length === 0
+
+    ){
+
+        section.style.display =
+        "none";
+
+        return;
+
+    }
+
+
+    /* -----------------------------------------------
+       SHOW SECTION
+    ------------------------------------------------ */
+
+    section.style.display =
+    "block";
+
+
+    /* -----------------------------------------------
+       LOOP UNLIMITED DATA
+    ------------------------------------------------ */
+
+    collaborations.forEach(
+
+        function(item){
+
+            const companyName =
+
+            item.companyName ||
+
+            "Company";
+
+
+            const companyLogo =
+
+            item.companyLogo ||
+
+            "https://ui-avatars.com/api/?name=" +
+
+            encodeURIComponent(
+                companyName
+            ) +
+
+            "&background=16a34a&color=fff&size=120";
+
+
+            const employeePicture =
+
+            item.employeePicture ||
+
+            "https://ui-avatars.com/api/?name=" +
+
+            encodeURIComponent(
+                companyName
+            ) +
+
+            "&background=0f766e&color=fff&size=120";
+
+
+            grid.innerHTML +=
+
+            `
+
+            <div class="collaboration-card">
+
+
+                <div class="company-header">
+
+
+                    <img
+
+                    class="company-logo"
+
+                    src="${escapeHTML(
+                        companyLogo
+                    )}"
+
+                    alt="Company Logo"
+
+                    onerror="this.src='https://ui-avatars.com/api/?name=Company&background=16a34a&color=fff&size=120';"
+
+                    >
+
+
+                    <div>
+
+
+                        <div class="collaboration-label">
+
+                            ${
+                                escapeHTML(
+                                    item.label ||
+                                    "Collaboration"
+                                )
+                            }
+
+                        </div>
+
+
+                        <div class="company-name">
+
+                            ${
+                                escapeHTML(
+                                    companyName
+                                )
+                            }
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="employee-section">
+
+
+                    <img
+
+                    class="employee-picture"
+
+                    src="${escapeHTML(
+                        employeePicture
+                    )}"
+
+                    alt="Employee Picture"
+
+                    onerror="this.src='https://ui-avatars.com/api/?name=Employee&background=0f766e&color=fff&size=120';"
+
+                    >
+
+
+                    <div class="employee-details">
+
+
+                        <div class="employee-id">
+
+                            Employee ID:
+
+                            ${
+                                escapeHTML(
+                                    item.employeeId ||
+                                    "Not provided"
+                                )
+                            }
+
+                        </div>
+
+
+                        <div class="employee-role">
+
+                            Professional Collaboration
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="collaboration-date">
+
+
+                    <span class="date-label">
+
+                        Collaboration Since
+
+                    </span>
+
+
+                    <span class="date-value">
+
+                        ${
+                            escapeHTML(
+                                item.collaborationSince ||
+                                "Not provided"
+                            )
+                        }
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+            `;
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================================
+   PROFILE IMAGE ERROR
+===================================================== */
+
+document
+
+.getElementById(
+    "profilePicture"
+)
+
+.addEventListener(
+
+    "error",
+
+    function(){
+
+        const name =
+
+        document
+        .getElementById(
+            "profileName"
+        )
+        .textContent ||
+
+        "User";
+
+
+        this.src =
+
+        "https://ui-avatars.com/api/?name=" +
+
+        encodeURIComponent(
+            name
+        ) +
+
+        "&background=16a34a&color=fff&size=200";
+
+    }
+
+);
 
 
 
@@ -2830,8 +1997,13 @@ function logout(){
    START
 ===================================================== */
 
-loadProfile();
+document.addEventListener(
 
+    "DOMContentLoaded",
+
+    loadAccount
+
+);
 
 </script>
 
