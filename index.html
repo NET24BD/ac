@@ -1,0 +1,456 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#07111f">
+
+<title>Welcome | LINK4 COMMUNICATION</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #07111f 0%,
+        #0b2d25 50%,
+        #07111f 100%
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    overflow:hidden;
+
+}
+
+
+/* Background Effects */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:400px;
+
+    height:400px;
+
+    background:#00c853;
+
+    opacity:0.08;
+
+    border-radius:50%;
+
+    top:-150px;
+
+    left:-150px;
+
+    filter:blur(80px);
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:400px;
+
+    height:400px;
+
+    background:#00e676;
+
+    opacity:0.06;
+
+    border-radius:50%;
+
+    bottom:-150px;
+
+    right:-150px;
+
+    filter:blur(80px);
+
+}
+
+
+/* Main Container */
+
+.container{
+
+    width:100%;
+
+    max-width:800px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* Logo */
+
+.logo{
+
+    width:95px;
+
+    height:95px;
+
+    margin:
+    0 auto 25px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00e676
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    color:white;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,200,83,0.3);
+
+}
+
+
+/* Hello */
+
+.hello{
+
+    font-size:18px;
+
+    color:#00e676;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+}
+
+
+/* Title */
+
+h1{
+
+    font-size:
+    clamp(34px,6vw,60px);
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+
+h1 span{
+
+    color:#00e676;
+
+}
+
+
+/* Description */
+
+.description{
+
+    max-width:600px;
+
+    margin:
+    0 auto 35px;
+
+    color:#aab7c4;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+
+/* Button */
+
+.login-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:
+    15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00e676
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:
+    0.3s ease;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,200,83,0.25);
+
+}
+
+
+.login-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(0,200,83,0.4);
+
+}
+
+
+.arrow{
+
+    font-size:20px;
+
+    transition:
+    0.3s ease;
+
+}
+
+
+.login-btn:hover .arrow{
+
+    transform:
+    translateX(5px);
+
+}
+
+
+/* Footer */
+
+.footer{
+
+    margin-top:50px;
+
+    color:#667583;
+
+    font-size:12px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .logo{
+
+        width:80px;
+
+        height:80px;
+
+        font-size:26px;
+
+    }
+
+
+    .description{
+
+        font-size:14px;
+
+    }
+
+
+    .login-btn{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        L4
+
+    </div>
+
+
+
+    <!-- Hello -->
+
+    <div class="hello">
+
+        HELLO & WELCOME
+
+    </div>
+
+
+
+    <!-- Main Title -->
+
+    <h1>
+
+        Welcome to
+
+        <span>
+
+            LINK4
+
+        </span>
+
+        COMMUNICATION
+
+    </h1>
+
+
+
+    <!-- Description -->
+
+    <div class="description">
+
+        Professional Communication &
+
+        Management System
+
+        designed to manage your
+
+        operations, support, calls,
+
+        customer services and
+
+        team activities in one place.
+
+    </div>
+
+
+
+    <!-- Login Button -->
+
+    <a
+
+        href="login.html"
+
+        class="login-btn"
+
+    >
+
+        Go to Login
+
+        <span class="arrow">
+
+            →
+
+        </span>
+
+    </a>
+
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        © 2026 LINK4 COMMUNICATION
+
+        <br>
+
+        All Rights Reserved.
+
+    </div>
+
+
+</div>
+
+
+
+</body>
+
+</html>
+```
