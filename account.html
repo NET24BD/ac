@@ -5,10 +5,12 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#ffffff">
 
 <title>My Account | LINK4 COMMUNICATION</title>
+
 
 <style>
 
@@ -29,27 +31,27 @@ content="width=device-width, initial-scale=1.0">
 
 body{
 
-    min-height:100vh;
-
     font-family:
     "Segoe UI",
     Arial,
     sans-serif;
 
-    background:#f5f7fa;
+    background:#f6f8fb;
 
     color:#1f2937;
+
+    min-height:100vh;
 
 }
 
 
 /* =====================================================
-   TOP NAVBAR
+   NAVBAR
 ===================================================== */
 
 .navbar{
 
-    height:70px;
+    height:72px;
 
     background:#ffffff;
 
@@ -63,7 +65,7 @@ body{
     justify-content:space-between;
 
     padding:
-    0 35px;
+    0 40px;
 
     position:sticky;
 
@@ -87,11 +89,11 @@ body{
 
 .brand-logo{
 
-    width:40px;
+    width:42px;
 
-    height:40px;
+    height:42px;
 
-    border-radius:10px;
+    border-radius:11px;
 
     background:
     linear-gradient(
@@ -100,22 +102,22 @@ body{
         #14b8a6
     );
 
+    color:#ffffff;
+
     display:flex;
 
     align-items:center;
 
     justify-content:center;
 
-    color:white;
+    font-size:17px;
 
-    font-size:18px;
-
-    font-weight:700;
+    font-weight:800;
 
 }
 
 
-.brand-text{
+.brand-name{
 
     font-size:18px;
 
@@ -123,75 +125,64 @@ body{
 
     color:#111827;
 
-    letter-spacing:
-    0.3px;
-
 }
 
 
-.back-btn{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
+.dashboard-btn{
 
     text-decoration:none;
 
-    color:#4b5563;
+    color:#374151;
+
+    background:#ffffff;
+
+    border:
+    1px solid #e5e7eb;
+
+    padding:
+    10px 17px;
+
+    border-radius:9px;
 
     font-size:14px;
 
     font-weight:600;
 
-    padding:
-    10px 16px;
-
-    border:
-    1px solid #e5e7eb;
-
-    border-radius:9px;
-
-    background:#ffffff;
-
     transition:
-    0.25s ease;
+    0.25s;
 
 }
 
 
-.back-btn:hover{
-
-    color:#0f766e;
-
-    border-color:#14b8a6;
+.dashboard-btn:hover{
 
     background:#f0fdfa;
 
+    border-color:#14b8a6;
+
+    color:#0f766e;
+
 }
 
 
 /* =====================================================
-   PAGE
+   MAIN
 ===================================================== */
 
-.page{
+.container{
 
-    width:100%;
+    max-width:1150px;
 
-    max-width:1100px;
-
-    margin:0 auto;
+    margin:auto;
 
     padding:
-    35px 25px 50px;
+    38px 24px 60px;
 
 }
 
 
 /* =====================================================
-   PAGE HEADER
+   PAGE TITLE
 ===================================================== */
 
 .page-header{
@@ -203,22 +194,22 @@ body{
 
 .page-title{
 
-    font-size:28px;
+    font-size:30px;
 
-    font-weight:700;
+    font-weight:750;
 
     color:#111827;
-
-    margin-bottom:7px;
 
 }
 
 
 .page-subtitle{
 
-    font-size:14px;
+    margin-top:7px;
 
     color:#6b7280;
+
+    font-size:14px;
 
 }
 
@@ -234,7 +225,7 @@ body{
     border:
     1px solid #e5e7eb;
 
-    border-radius:16px;
+    border-radius:18px;
 
     padding:30px;
 
@@ -245,7 +236,7 @@ body{
     gap:25px;
 
     box-shadow:
-    0 5px 20px
+    0 8px 25px
     rgba(15,23,42,0.05);
 
     margin-bottom:25px;
@@ -253,29 +244,49 @@ body{
 }
 
 
-/* =====================================================
-   PROFILE AVATAR
-===================================================== */
+.profile-picture{
 
-.avatar{
+    width:100px;
 
-    width:88px;
+    height:100px;
 
-    height:88px;
+    border-radius:20px;
 
-    border-radius:18px;
-
-    flex-shrink:0;
+    object-fit:cover;
 
     background:
-
     linear-gradient(
         135deg,
         #0f766e,
         #14b8a6
     );
 
-    color:white;
+    border:
+    4px solid #ffffff;
+
+    box-shadow:
+    0 5px 18px
+    rgba(15,118,110,0.20);
+
+}
+
+
+.profile-placeholder{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    color:#ffffff;
 
     display:flex;
 
@@ -283,19 +294,14 @@ body{
 
     justify-content:center;
 
-    font-size:32px;
+    font-size:34px;
 
     font-weight:700;
-
-    box-shadow:
-
-    0 8px 20px
-    rgba(15,118,110,0.20);
 
 }
 
 
-.profile-content{
+.profile-info{
 
     flex:1;
 
@@ -304,18 +310,18 @@ body{
 
 .profile-name{
 
-    font-size:25px;
+    font-size:26px;
 
-    font-weight:700;
+    font-weight:750;
 
     color:#111827;
-
-    margin-bottom:7px;
 
 }
 
 
 .profile-role{
+
+    margin-top:5px;
 
     font-size:14px;
 
@@ -323,18 +329,18 @@ body{
 
     font-weight:600;
 
-    margin-bottom:10px;
-
 }
 
 
-.status-badge{
+.status{
 
     display:inline-flex;
 
     align-items:center;
 
     gap:7px;
+
+    margin-top:12px;
 
     padding:
     6px 12px;
@@ -347,7 +353,7 @@ body{
 
     font-size:12px;
 
-    font-weight:600;
+    font-weight:700;
 
 }
 
@@ -376,15 +382,14 @@ body{
     border:
     1px solid #e5e7eb;
 
-    border-radius:16px;
+    border-radius:18px;
 
     padding:28px;
 
     margin-bottom:25px;
 
     box-shadow:
-
-    0 5px 20px
+    0 6px 22px
     rgba(15,23,42,0.04);
 
 }
@@ -398,28 +403,28 @@ body{
 
     justify-content:space-between;
 
+    border-bottom:
+    1px solid #eef0f3;
+
     padding-bottom:18px;
 
     margin-bottom:22px;
-
-    border-bottom:
-    1px solid #f0f1f3;
 
 }
 
 
 .section-title{
 
-    font-size:18px;
+    font-size:19px;
 
-    font-weight:700;
+    font-weight:750;
 
     color:#111827;
 
 }
 
 
-.section-label{
+.section-subtitle{
 
     font-size:12px;
 
@@ -446,8 +451,6 @@ body{
 
 .info-box{
 
-    padding:18px;
-
     background:#f9fafb;
 
     border:
@@ -455,17 +458,19 @@ body{
 
     border-radius:12px;
 
+    padding:17px;
+
     transition:
-    0.25s ease;
+    0.25s;
 
 }
 
 
 .info-box:hover{
 
-    border-color:#99f6e4;
-
     background:#f0fdfa;
+
+    border-color:#99f6e4;
 
 }
 
@@ -483,7 +488,7 @@ body{
     letter-spacing:
     0.5px;
 
-    margin-bottom:8px;
+    margin-bottom:7px;
 
 }
 
@@ -502,6 +507,172 @@ body{
 
 
 /* =====================================================
+   COLLABORATION GRID
+===================================================== */
+
+.collaboration-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+
+.collaboration-card{
+
+    border:
+    1px solid #e5e7eb;
+
+    border-radius:15px;
+
+    background:#ffffff;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+    0.3s ease;
+
+}
+
+
+.collaboration-card:hover{
+
+    transform:
+    translateY(-4px);
+
+    border-color:#99f6e4;
+
+    box-shadow:
+    0 12px 30px
+    rgba(15,118,110,0.10);
+
+}
+
+
+.company-logo-area{
+
+    height:130px;
+
+    background:#f8fafc;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+}
+
+
+.company-logo{
+
+    max-width:150px;
+
+    max-height:90px;
+
+    object-fit:contain;
+
+}
+
+
+.company-logo-placeholder{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+    font-weight:700;
+
+}
+
+
+.company-info{
+
+    padding:18px;
+
+}
+
+
+.company-name{
+
+    font-size:16px;
+
+    font-weight:750;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+}
+
+
+.collaboration-label{
+
+    font-size:12px;
+
+    color:#6b7280;
+
+}
+
+
+.view-details{
+
+    margin-top:14px;
+
+    color:#0f766e;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty{
+
+    text-align:center;
+
+    padding:35px 15px;
+
+    color:#9ca3af;
+
+    font-size:14px;
+
+}
+
+
+/* =====================================================
    LOADING
 ===================================================== */
 
@@ -509,27 +680,23 @@ body{
 
     text-align:center;
 
-    padding:35px;
+    padding:40px;
 
     color:#6b7280;
-
-    font-size:14px;
 
 }
 
 
 .spinner{
 
-    width:30px;
+    width:32px;
 
-    height:30px;
+    height:32px;
 
     border:
-
     3px solid #e5e7eb;
 
-    border-top-color:
-    #0f766e;
+    border-top-color:#0f766e;
 
     border-radius:50%;
 
@@ -555,27 +722,249 @@ body{
 
 
 /* =====================================================
-   ERROR
+   MODAL
 ===================================================== */
 
-.error-box{
+.modal{
 
     display:none;
 
-    padding:18px;
+    position:fixed;
 
-    border-radius:10px;
+    inset:0;
 
-    background:#fef2f2;
+    background:
+    rgba(15,23,42,0.60);
+
+    z-index:1000;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+}
+
+
+.modal.active{
+
+    display:flex;
+
+}
+
+
+.modal-box{
+
+    width:100%;
+
+    max-width:700px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 25px 70px
+    rgba(0,0,0,0.20);
+
+    animation:
+    modalOpen 0.25s ease;
+
+}
+
+
+@keyframes modalOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(15px)
+        scale(0.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+.modal-top{
+
+    position:relative;
+
+}
+
+
+.collaboration-picture{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    display:none;
+
+}
+
+
+.modal-close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,0.92);
+
+    color:#374151;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:5;
+
+}
+
+
+.modal-content{
+
+    padding:28px;
+
+}
+
+
+.modal-company{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+.modal-logo{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:15px;
+
+    object-fit:contain;
+
+    background:#f8fafc;
+
+    padding:10px;
 
     border:
-    1px solid #fecaca;
+    1px solid #e5e7eb;
 
-    color:#b91c1c;
+}
+
+
+.modal-company-name{
+
+    font-size:23px;
+
+    font-weight:750;
+
+    color:#111827;
+
+}
+
+
+.modal-label{
+
+    font-size:12px;
+
+    color:#9ca3af;
+
+    margin-top:5px;
+
+}
+
+
+.modal-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+
+.modal-info{
+
+    background:#f9fafb;
+
+    border:
+    1px solid #eef0f2;
+
+    padding:16px;
+
+    border-radius:11px;
+
+}
+
+
+.modal-info-label{
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+
+    color:#9ca3af;
+
+    margin-bottom:7px;
+
+}
+
+
+.modal-info-value{
 
     font-size:14px;
 
-    text-align:center;
+    font-weight:600;
+
+    color:#1f2937;
+
+    word-break:break-word;
 
 }
 
@@ -584,37 +973,36 @@ body{
    LOGOUT
 ===================================================== */
 
-.logout-section{
+.logout-area{
 
     display:flex;
 
     justify-content:flex-end;
+
+    margin-top:5px;
 
 }
 
 
 .logout-btn{
 
-    padding:
-    11px 22px;
-
     border:
     1px solid #fecaca;
-
-    border-radius:9px;
 
     background:#ffffff;
 
     color:#dc2626;
 
+    padding:
+    11px 22px;
+
+    border-radius:9px;
+
     font-size:14px;
 
-    font-weight:600;
+    font-weight:650;
 
     cursor:pointer;
-
-    transition:
-    0.25s ease;
 
 }
 
@@ -623,8 +1011,6 @@ body{
 
     background:#fef2f2;
 
-    border-color:#f87171;
-
 }
 
 
@@ -632,7 +1018,19 @@ body{
    MOBILE
 ===================================================== */
 
-@media(max-width:700px){
+@media(max-width:850px){
+
+    .collaboration-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:650px){
 
     .navbar{
 
@@ -642,36 +1040,46 @@ body{
     }
 
 
-    .brand-text{
+    .brand-name{
 
-        font-size:15px;
+        font-size:14px;
 
     }
 
 
-    .page{
+    .dashboard-btn{
 
         padding:
-        25px 15px 40px;
+        8px 11px;
+
+        font-size:12px;
+
+    }
+
+
+    .container{
+
+        padding:
+        25px 15px 45px;
 
     }
 
 
     .page-title{
 
-        font-size:23px;
+        font-size:24px;
 
     }
 
 
     .profile-card{
 
-        padding:22px;
-
         flex-direction:
         column;
 
         text-align:center;
+
+        padding:25px;
 
     }
 
@@ -691,15 +1099,25 @@ body{
     }
 
 
-    .section-header{
+    .collaboration-grid{
 
-        align-items:
-        flex-start;
+        grid-template-columns:
+        1fr;
 
-        gap:8px;
+    }
 
-        flex-direction:
-        column;
+
+    .modal-grid{
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+
+    .modal-content{
+
+        padding:20px;
 
     }
 
@@ -719,9 +1137,7 @@ body{
 
 <nav class="navbar">
 
-
     <div class="brand">
-
 
         <div class="brand-logo">
 
@@ -729,42 +1145,36 @@ body{
 
         </div>
 
-
-        <div class="brand-text">
+        <div class="brand-name">
 
             LINK4 COMMUNICATION
 
         </div>
-
 
     </div>
 
 
     <a
         href="dashboard.html"
-        class="back-btn"
+        class="dashboard-btn"
     >
 
         ← Dashboard
 
     </a>
 
-
 </nav>
 
 
 
 <!-- =====================================================
-     MAIN PAGE
+     MAIN
 ===================================================== -->
 
-<main class="page">
+<main class="container">
 
-
-    <!-- PAGE HEADER -->
 
     <div class="page-header">
-
 
         <div class="page-title">
 
@@ -772,13 +1182,11 @@ body{
 
         </div>
 
-
         <div class="page-subtitle">
 
-            Manage and view your personal account information
+            View your account, personal information and collaboration profile
 
         </div>
-
 
     </div>
 
@@ -791,17 +1199,29 @@ body{
     <div class="profile-card">
 
 
-        <div
-            class="avatar"
-            id="avatar"
-        >
+        <div id="profilePictureContainer">
 
-            U
+            <div
+                class="profile-placeholder"
+                id="profilePlaceholder"
+            >
+
+                U
+
+            </div>
+
+
+            <img
+                id="profilePicture"
+                class="profile-picture"
+                style="display:none;"
+                alt="Profile Picture"
+            >
 
         </div>
 
 
-        <div class="profile-content">
+        <div class="profile-info">
 
 
             <div
@@ -824,17 +1244,13 @@ body{
             </div>
 
 
-            <div class="status-badge">
+            <div class="status">
 
 
-                <span
-                    class="status-dot"
-                ></span>
+                <span class="status-dot"></span>
 
 
-                <span
-                    id="profileStatus"
-                >
+                <span id="profileStatus">
 
                     Loading...
 
@@ -855,7 +1271,7 @@ body{
          ACCOUNT INFORMATION
     ================================================== -->
 
-    <div class="section">
+    <section class="section">
 
 
         <div class="section-header">
@@ -868,7 +1284,7 @@ body{
             </div>
 
 
-            <div class="section-label">
+            <div class="section-subtitle">
 
                 Account Overview
 
@@ -890,7 +1306,6 @@ body{
 
                 </div>
 
-
                 <div
                     class="info-value"
                     id="name"
@@ -903,7 +1318,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -911,7 +1325,6 @@ body{
                     Username
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -925,7 +1338,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -933,7 +1345,6 @@ body{
                     Role
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -947,15 +1358,13 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
 
-                    Account Status
+                    Status
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -972,7 +1381,7 @@ body{
         </div>
 
 
-    </div>
+    </section>
 
 
 
@@ -980,7 +1389,7 @@ body{
          PERSONAL INFORMATION
     ================================================== -->
 
-    <div class="section">
+    <section class="section">
 
 
         <div class="section-header">
@@ -993,7 +1402,7 @@ body{
             </div>
 
 
-            <div class="section-label">
+            <div class="section-subtitle">
 
                 Employee Profile
 
@@ -1004,36 +1413,7 @@ body{
 
 
 
-        <div
-            class="loading"
-            id="loading"
-        >
-
-
-            <div
-                class="spinner"
-            ></div>
-
-
-            Loading personal information...
-
-
-        </div>
-
-
-
-        <div
-            class="error-box"
-            id="errorBox"
-        ></div>
-
-
-
-        <div
-            class="info-grid"
-            id="personalGrid"
-            style="display:none;"
-        >
+        <div class="info-grid">
 
 
             <div class="info-box">
@@ -1043,7 +1423,6 @@ body{
                     Phone
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1057,7 +1436,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1065,7 +1443,6 @@ body{
                     Email
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1079,7 +1456,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1087,7 +1463,6 @@ body{
                     Department
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1101,7 +1476,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1109,7 +1483,6 @@ body{
                     Designation
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1123,7 +1496,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1131,7 +1503,6 @@ body{
                     Employee ID
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1145,7 +1516,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1153,7 +1523,6 @@ body{
                     Location
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1167,7 +1536,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1175,7 +1543,6 @@ body{
                     Joining Date
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1189,7 +1556,6 @@ body{
             </div>
 
 
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1197,7 +1563,6 @@ body{
                     Address
 
                 </div>
-
 
                 <div
                     class="info-value"
@@ -1214,7 +1579,55 @@ body{
         </div>
 
 
-    </div>
+    </section>
+
+
+
+    <!-- =================================================
+         COLLABORATION
+    ================================================== -->
+
+    <section class="section">
+
+
+        <div class="section-header">
+
+
+            <div class="section-title">
+
+                Our Collaboration Partners
+
+            </div>
+
+
+            <div class="section-subtitle">
+
+                Professional Collaboration
+
+            </div>
+
+
+        </div>
+
+
+
+        <div
+            class="collaboration-grid"
+            id="collaborationGrid"
+        >
+
+            <div class="loading">
+
+                <div class="spinner"></div>
+
+                Loading collaboration information...
+
+            </div>
+
+        </div>
+
+
+    </section>
 
 
 
@@ -1222,8 +1635,7 @@ body{
          LOGOUT
     ================================================== -->
 
-    <div class="logout-section">
-
+    <div class="logout-area">
 
         <button
             class="logout-btn"
@@ -1234,7 +1646,6 @@ body{
 
         </button>
 
-
     </div>
 
 
@@ -1242,11 +1653,190 @@ body{
 
 
 
+<!-- =====================================================
+     COLLABORATION MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="collaborationModal"
+>
+
+
+    <div class="modal-box">
+
+
+        <div class="modal-top">
+
+
+            <button
+                class="modal-close"
+                onclick="closeModal()"
+            >
+
+                ×
+
+            </button>
+
+
+            <img
+                id="modalCollaborationPicture"
+                class="collaboration-picture"
+                alt="Collaboration Picture"
+            >
+
+
+        </div>
+
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-company">
+
+
+                <img
+                    id="modalCompanyLogo"
+                    class="modal-logo"
+                    alt="Company Logo"
+                >
+
+
+                <div>
+
+
+                    <div
+                        class="modal-company-name"
+                        id="modalCompanyName"
+                    >
+
+                        Company
+
+                    </div>
+
+
+                    <div class="modal-label">
+
+                        Collaboration Partner
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="modal-grid">
+
+
+                <div class="modal-info">
+
+
+                    <div class="modal-info-label">
+
+                        Employee Picture
+
+                    </div>
+
+
+                    <div class="modal-info-value">
+
+                        <img
+                            id="modalEmployeePicture"
+                            style="
+                            width:70px;
+                            height:70px;
+                            border-radius:12px;
+                            object-fit:cover;
+                            display:none;
+                            "
+                            alt="Employee Picture"
+                        >
+
+                        <span
+                            id="employeePictureText"
+                        >
+
+                            Available in profile
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-info">
+
+
+                    <div class="modal-info-label">
+
+                        Employee ID
+
+                    </div>
+
+
+                    <div
+                        class="modal-info-value"
+                        id="modalEmployeeId"
+                    >
+
+                        -
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-info">
+
+
+                    <div class="modal-info-label">
+
+                        Collaboration Since
+
+                    </div>
+
+
+                    <div
+                        class="modal-info-value"
+                        id="modalCollaborationSince"
+                    >
+
+                        -
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
 <script>
 
 
 /* =====================================================
-   API URL
+   API
 ===================================================== */
 
 const API_URL =
@@ -1308,91 +1898,43 @@ localStorage.getItem(
 
 
 /* =====================================================
-   BASIC INFORMATION
+   INITIAL BASIC DATA
 ===================================================== */
 
-document
-.getElementById(
-    "name"
-)
-.innerText =
+setText(
+    "name",
+    loginName
+);
 
-loginName;
+setText(
+    "username",
+    username
+);
 
+setText(
+    "role",
+    loginRole
+);
 
-document
-.getElementById(
-    "username"
-)
-.innerText =
+setText(
+    "status",
+    loginStatus
+);
 
-username;
+setText(
+    "profileName",
+    loginName
+);
 
+setText(
+    "profileRole",
+    loginRole
+);
 
-document
-.getElementById(
-    "role"
-)
-.innerText =
-
-loginRole;
-
-
-document
-.getElementById(
-    "status"
-)
-.innerText =
-
-loginStatus;
-
-
-
-/* =====================================================
-   PROFILE HEADER
-===================================================== */
-
-document
-.getElementById(
-    "profileName"
-)
-.innerText =
-
-loginName;
-
-
-document
-.getElementById(
-    "profileRole"
-)
-.innerText =
-
-loginRole;
-
-
-document
-.getElementById(
-    "profileStatus"
-)
-.innerText =
-
-loginStatus;
-
-
-
-/* =====================================================
-   AVATAR
-===================================================== */
-
-document
-.getElementById(
-    "avatar"
-)
-.innerText =
-
-loginName
-.charAt(0)
-.toUpperCase();
+setText(
+    "profileStatus",
+    loginStatus
+);
 
 
 
@@ -1404,10 +1946,6 @@ function loadProfile(){
 
 
     if(!username){
-
-        showError(
-            "Username not found. Please login again."
-        );
 
         return;
 
@@ -1442,12 +1980,8 @@ function loadProfile(){
                 data.success !== true
             ){
 
-                showError(
-
-                    data.message ||
-
-                    "Unable to load profile information."
-
+                console.error(
+                    data.message
                 );
 
                 return;
@@ -1457,34 +1991,110 @@ function loadProfile(){
 
 
             /* =========================================
-               UPDATE BASIC DATA
+               BASIC USER DATA
             ========================================== */
 
-            if(data.name){
+            setText(
+                "name",
+                data.name || loginName
+            );
+
+            setText(
+                "profileName",
+                data.name || loginName
+            );
+
+
+            setText(
+                "username",
+                data.username || username
+            );
+
+
+            setText(
+                "role",
+                data.role || loginRole
+            );
+
+            setText(
+                "profileRole",
+                data.role || loginRole
+            );
+
+
+            setText(
+                "status",
+                data.status || loginStatus
+            );
+
+            setText(
+                "profileStatus",
+                data.status || loginStatus
+            );
+
+
+
+            /* =========================================
+               PROFILE PICTURE
+            ========================================== */
+
+            const profile =
+
+            data.profile || {};
+
+
+            const profilePicture =
+
+            getValue(
+                profile,
+                [
+                    "Profile Picture",
+                    "ProfilePicture",
+                    "Picture",
+                    "Photo"
+                ]
+            );
+
+
+            if(profilePicture){
 
                 document
                 .getElementById(
-                    "name"
+                    "profilePicture"
                 )
-                .innerText =
-                data.name;
+                .src =
+                profilePicture;
 
 
                 document
                 .getElementById(
-                    "profileName"
+                    "profilePicture"
                 )
-                .innerText =
-                data.name;
+                .style.display =
+                "block";
 
 
                 document
                 .getElementById(
-                    "avatar"
+                    "profilePlaceholder"
+                )
+                .style.display =
+                "none";
+
+            }
+
+            else{
+
+                document
+                .getElementById(
+                    "profilePlaceholder"
                 )
                 .innerText =
 
-                data.name
+                String(
+                    data.name ||
+                    loginName
+                )
                 .charAt(0)
                 .toUpperCase();
 
@@ -1492,58 +2102,11 @@ function loadProfile(){
 
 
 
-            if(data.role){
-
-                document
-                .getElementById(
-                    "role"
-                )
-                .innerText =
-                data.role;
-
-
-                document
-                .getElementById(
-                    "profileRole"
-                )
-                .innerText =
-                data.role;
-
-            }
-
-
-
-            if(data.status){
-
-                document
-                .getElementById(
-                    "status"
-                )
-                .innerText =
-                data.status;
-
-
-                document
-                .getElementById(
-                    "profileStatus"
-                )
-                .innerText =
-                data.status;
-
-            }
-
-
-
             /* =========================================
-               PROFILE DATA
+               PERSONAL INFORMATION
             ========================================== */
 
-            const profile =
-            data.profile || {};
-
-
-
-            setValue(
+            setText(
                 "phone",
                 getValue(
                     profile,
@@ -1555,7 +2118,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "email",
                 getValue(
                     profile,
@@ -1567,7 +2130,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "department",
                 getValue(
                     profile,
@@ -1578,7 +2141,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "designation",
                 getValue(
                     profile,
@@ -1589,7 +2152,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "employeeId",
                 getValue(
                     profile,
@@ -1602,7 +2165,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "location",
                 getValue(
                     profile,
@@ -1613,7 +2176,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "joiningDate",
                 getValue(
                     profile,
@@ -1625,7 +2188,7 @@ function loadProfile(){
             );
 
 
-            setValue(
+            setText(
                 "address",
                 getValue(
                     profile,
@@ -1638,23 +2201,13 @@ function loadProfile(){
 
 
             /* =========================================
-               HIDE LOADING
+               COLLABORATION
             ========================================== */
 
-            document
-            .getElementById(
-                "loading"
-            )
-            .style.display =
-            "none";
-
-
-            document
-            .getElementById(
-                "personalGrid"
-            )
-            .style.display =
-            "grid";
+            renderCollaborations(
+                data.collaborations ||
+                []
+            );
 
         }
 
@@ -1665,14 +2218,236 @@ function loadProfile(){
         error => {
 
             console.error(
+                "Profile Error:",
                 error
             );
 
+            document
+            .getElementById(
+                "collaborationGrid"
+            )
+            .innerHTML =
 
-            showError(
+            '<div class="empty">Unable to load collaboration information.</div>';
 
-                "Unable to connect to server. Please try again."
+        }
 
+    );
+
+}
+
+
+
+/* =====================================================
+   RENDER COLLABORATIONS
+===================================================== */
+
+function renderCollaborations(
+    collaborations
+){
+
+
+    const grid =
+
+    document
+    .getElementById(
+        "collaborationGrid"
+    );
+
+
+    grid.innerHTML = "";
+
+
+
+    if(
+
+        !Array.isArray(
+            collaborations
+        )
+
+        ||
+
+        collaborations.length === 0
+
+    ){
+
+        grid.innerHTML =
+
+        '<div class="empty">No collaboration information available.</div>';
+
+        return;
+
+    }
+
+
+
+    collaborations.forEach(
+
+        function(
+            item
+        ){
+
+            const companyName =
+
+            item.companyName ||
+
+            item["Company Name"] ||
+
+            "-";
+
+
+            const companyLogo =
+
+            item.companyLogo ||
+
+            item["Company Logo"] ||
+
+            "";
+
+
+            const employeePicture =
+
+            item.employeePicture ||
+
+            item["Employee Picture"] ||
+
+            "";
+
+
+            const employeeId =
+
+            item.employeeId ||
+
+            item["Employee ID"] ||
+
+            "-";
+
+
+            const collaborationSince =
+
+            item.collaborationSince ||
+
+            item["Collaboration Since"] ||
+
+            "-";
+
+
+
+            const card =
+
+            document
+            .createElement(
+                "div"
+            );
+
+
+            card.className =
+
+            "collaboration-card";
+
+
+
+            let logoHTML;
+
+
+
+            if(companyLogo){
+
+                logoHTML =
+
+                `<img
+                    src="${escapeHTML(companyLogo)}"
+                    class="company-logo"
+                    alt="Company Logo"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                >
+                <div
+                    class="company-logo-placeholder"
+                    style="display:none;"
+                >
+                    ${escapeHTML(
+                        companyName
+                        .charAt(0)
+                        .toUpperCase()
+                    )}
+                </div>`;
+
+            }
+
+            else{
+
+                logoHTML =
+
+                `<div class="company-logo-placeholder">
+                    ${escapeHTML(
+                        companyName
+                        .charAt(0)
+                        .toUpperCase()
+                    )}
+                </div>`;
+
+            }
+
+
+
+            card.innerHTML =
+
+            `
+
+            <div class="company-logo-area">
+
+                ${logoHTML}
+
+            </div>
+
+
+            <div class="company-info">
+
+                <div class="company-name">
+
+                    ${escapeHTML(
+                        companyName
+                    )}
+
+                </div>
+
+
+                <div class="collaboration-label">
+
+                    Collaboration Since:
+                    ${escapeHTML(
+                        collaborationSince
+                    )}
+
+                </div>
+
+
+                <div class="view-details">
+
+                    View Collaboration Details →
+
+                </div>
+
+            </div>
+
+            `;
+
+
+
+            card.onclick =
+
+            function(){
+
+                openModal(
+                    item
+                );
+
+            };
+
+
+
+            grid.appendChild(
+                card
             );
 
         }
@@ -1684,31 +2459,272 @@ function loadProfile(){
 
 
 /* =====================================================
+   OPEN MODAL
+===================================================== */
+
+function openModal(
+    item
+){
+
+
+    const companyName =
+
+    item.companyName ||
+
+    item["Company Name"] ||
+
+    "-";
+
+
+    const companyLogo =
+
+    item.companyLogo ||
+
+    item["Company Logo"] ||
+
+    "";
+
+
+    const employeePicture =
+
+    item.employeePicture ||
+
+    item["Employee Picture"] ||
+
+    "";
+
+
+    const employeeId =
+
+    item.employeeId ||
+
+    item["Employee ID"] ||
+
+    "-";
+
+
+    const collaborationSince =
+
+    item.collaborationSince ||
+
+    item["Collaboration Since"] ||
+
+    "-";
+
+
+
+    setText(
+        "modalCompanyName",
+        companyName
+    );
+
+
+    setText(
+        "modalEmployeeId",
+        employeeId
+    );
+
+
+    setText(
+        "modalCollaborationSince",
+        collaborationSince
+    );
+
+
+
+    const logo =
+
+    document
+    .getElementById(
+        "modalCompanyLogo"
+    );
+
+
+    if(companyLogo){
+
+        logo.src =
+        companyLogo;
+
+        logo.style.display =
+        "block";
+
+    }
+
+    else{
+
+        logo.style.display =
+        "none";
+
+    }
+
+
+
+    const collaborationPicture =
+
+    document
+    .getElementById(
+        "modalCollaborationPicture"
+    );
+
+
+    if(
+        item.collaborationPicture ||
+
+        item["Collaboration Picture"]
+    ){
+
+        collaborationPicture.src =
+
+        item.collaborationPicture ||
+
+        item["Collaboration Picture"];
+
+        collaborationPicture.style.display =
+        "block";
+
+    }
+
+    else{
+
+        collaborationPicture.style.display =
+        "none";
+
+    }
+
+
+
+    const employeeImg =
+
+    document
+    .getElementById(
+        "modalEmployeePicture"
+    );
+
+
+    const employeeText =
+
+    document
+    .getElementById(
+        "employeePictureText"
+    );
+
+
+
+    if(employeePicture){
+
+        employeeImg.src =
+        employeePicture;
+
+        employeeImg.style.display =
+        "block";
+
+        employeeText.style.display =
+        "none";
+
+    }
+
+    else{
+
+        employeeImg.style.display =
+        "none";
+
+        employeeText.style.display =
+        "inline";
+
+    }
+
+
+
+    document
+    .getElementById(
+        "collaborationModal"
+    )
+    .classList
+    .add(
+        "active"
+    );
+
+}
+
+
+
+/* =====================================================
+   CLOSE MODAL
+===================================================== */
+
+function closeModal(){
+
+    document
+    .getElementById(
+        "collaborationModal"
+    )
+    .classList
+    .remove(
+        "active"
+    );
+
+}
+
+
+
+/* =====================================================
+   CLICK OUTSIDE MODAL
+===================================================== */
+
+document
+.getElementById(
+    "collaborationModal"
+)
+.addEventListener(
+
+    "click",
+
+    function(e){
+
+        if(
+            e.target ===
+            this
+        ){
+
+            closeModal();
+
+        }
+
+    }
+
+);
+
+
+
+/* =====================================================
    GET VALUE
 ===================================================== */
 
 function getValue(
-    profile,
+    object,
     keys
 ){
 
     for(
+
         let i = 0;
 
         i < keys.length;
 
         i++
+
     ){
 
         if(
 
-            profile[
+            object &&
+            object[
                 keys[i]
             ] !== undefined
 
         ){
 
-            return profile[
+            return object[
                 keys[i]
             ];
 
@@ -1724,56 +2740,72 @@ function getValue(
 
 
 /* =====================================================
-   SET VALUE
+   SET TEXT
 ===================================================== */
 
-function setValue(
+function setText(
     id,
     value
 ){
 
+    const element =
+
     document
     .getElementById(
         id
-    )
-    .innerText =
+    );
 
-    value || "-";
+
+    if(element){
+
+        element.innerText =
+
+        value ||
+
+        "-";
+
+    }
 
 }
 
 
 
 /* =====================================================
-   ERROR
+   ESCAPE HTML
 ===================================================== */
 
-function showError(
-    message
+function escapeHTML(
+    value
 ){
 
-    document
-    .getElementById(
-        "loading"
+    return String(
+        value || ""
     )
-    .style.display =
-    "none";
 
+    .replace(
+        /&/g,
+        "&amp;"
+    )
 
-    const box =
+    .replace(
+        /</g,
+        "&lt;"
+    )
 
-    document
-    .getElementById(
-        "errorBox"
+    .replace(
+        />/g,
+        "&gt;"
+    )
+
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+
+    .replace(
+        /'/g,
+        "&#039;"
     );
-
-
-    box.style.display =
-    "block";
-
-
-    box.innerText =
-    message;
 
 }
 
@@ -1799,6 +2831,7 @@ function logout(){
 ===================================================== */
 
 loadProfile();
+
 
 </script>
 
