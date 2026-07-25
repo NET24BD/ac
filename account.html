@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#07111f">
+
+<title>My Account | LINK4 COMMUNICATION</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #07111f,
+        #0b2d25,
+        #07111f
+    );
+
+    color:white;
+
+    padding:25px;
+
+}
+
+
+.container{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+/* HEADER */
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
+}
+
+
+.back-btn{
+
+    text-decoration:none;
+
+    color:#aab7c4;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    background:
+    rgba(255,255,255,0.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+}
+
+
+.back-btn:hover{
+
+    color:#00e676;
+
+    border-color:#00e676;
+
+}
+
+
+.title{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+
+/* PROFILE CARD */
+
+.profile-card{
+
+    background:
+    rgba(255,255,255,0.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    backdrop-filter:
+    blur(15px);
+
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,0.3);
+
+}
+
+
+/* AVATAR */
+
+.avatar{
+
+    width:90px;
+
+    height:90px;
+
+    margin:
+    0 auto 18px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00e676
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,200,83,0.3);
+
+}
+
+
+.name{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+
+.role{
+
+    color:#00e676;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+
+.status{
+
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    background:
+    rgba(0,230,118,0.12);
+
+    color:#00e676;
+
+    font-size:12px;
+
+}
+
+
+/* INFORMATION */
+
+.info-section{
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+    border-radius:22px;
+
+    padding:30px;
+
+}
+
+
+.section-title{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:22px;
+
+}
+
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+
+.info-box{
+
+    padding:20px;
+
+    border-radius:14px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid
+    rgba(255,255,255,0.07);
+
+}
+
+
+.info-label{
+
+    color:#84919d;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+
+}
+
+
+.info-value{
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    word-break:break-word;
+
+}
+
+
+/* LOGOUT */
+
+.logout-section{
+
+    margin-top:25px;
+
+}
+
+
+.logout-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:11px;
+
+    background:
+    rgba(255,80,80,0.12);
+
+    border:
+    1px solid
+    rgba(255,80,80,0.2);
+
+    color:#ff6b6b;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+.logout-btn:hover{
+
+    background:
+    rgba(255,80,80,0.2);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+
+    .header{
+
+        gap:15px;
+
+    }
+
+
+    .title{
+
+        font-size:20px;
+
+    }
+
+
+    .profile-card{
+
+        padding:28px 20px;
+
+    }
+
+
+    .info-section{
+
+        padding:22px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+
+        <a
+            href="dashboard.html"
+            class="back-btn"
+        >
+
+            ← Dashboard
+
+        </a>
+
+
+        <div class="title">
+
+            My Account
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- PROFILE -->
+
+    <div class="profile-card">
+
+
+        <div
+            class="avatar"
+            id="avatar"
+        >
+
+            U
+
+        </div>
+
+
+        <div
+            class="name"
+            id="profileName"
+        >
+
+            User
+
+        </div>
+
+
+        <div
+            class="role"
+            id="profileRole"
+        >
+
+            -
+
+        </div>
+
+
+        <div
+            class="status"
+            id="profileStatus"
+        >
+
+            -
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ACCOUNT INFORMATION -->
+
+    <div class="info-section">
+
+
+        <div class="section-title">
+
+            Account Information
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+            <!-- NAME -->
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    Name
+
+                </div>
+
+
+                <div
+                    class="info-value"
+                    id="name"
+                >
+
+                    -
+
+                </div>
+
+            </div>
+
+
+
+            <!-- USERNAME -->
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    Username
+
+                </div>
+
+
+                <div
+                    class="info-value"
+                    id="username"
+                >
+
+                    -
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROLE -->
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    Role
+
+                </div>
+
+
+                <div
+                    class="info-value"
+                    id="role"
+                >
+
+                    -
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    Status
+
+                </div>
+
+
+                <div
+                    class="info-value"
+                    id="status"
+                >
+
+                    -
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- LOGOUT -->
+
+    <div class="logout-section">
+
+
+        <button
+            class="logout-btn"
+            onclick="logout()"
+        >
+
+            Logout
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =================================
+   LOGIN SECURITY
+================================= */
+
+const loggedIn =
+
+localStorage.getItem(
+    "loggedIn"
+);
+
+
+if(
+    loggedIn !== "true"
+){
+
+    window.location.href =
+    "login.html";
+
+}
+
+
+
+/* =================================
+   GET LOGIN DATA
+================================= */
+
+const name =
+
+localStorage.getItem(
+    "name"
+) || "User";
+
+
+const username =
+
+localStorage.getItem(
+    "username"
+) || "-";
+
+
+const role =
+
+localStorage.getItem(
+    "role"
+) || "-";
+
+
+const status =
+
+localStorage.getItem(
+    "status"
+) || "-";
+
+
+
+/* =================================
+   SHOW PROFILE DATA
+================================= */
+
+document
+.getElementById(
+    "profileName"
+)
+.innerText =
+name;
+
+
+document
+.getElementById(
+    "profileRole"
+)
+.innerText =
+role;
+
+
+document
+.getElementById(
+    "profileStatus"
+)
+.innerText =
+status;
+
+
+document
+.getElementById(
+    "name"
+)
+.innerText =
+name;
+
+
+document
+.getElementById(
+    "username"
+)
+.innerText =
+username;
+
+
+document
+.getElementById(
+    "role"
+)
+.innerText =
+role;
+
+
+document
+.getElementById(
+    "status"
+)
+.innerText =
+status;
+
+
+
+/* =================================
+   AVATAR
+================================= */
+
+document
+.getElementById(
+    "avatar"
+)
+.innerText =
+
+name
+.charAt(0)
+.toUpperCase();
+
+
+
+/* =================================
+   LOGOUT
+================================= */
+
+function logout(){
+
+    localStorage.clear();
+
+    window.location.href =
+    "login.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
