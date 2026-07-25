@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,16 +11,28 @@ content="width=device-width, initial-scale=1.0">
 <meta name="theme-color"
 content="#07111f">
 
+<meta name="description"
+content="LINK4 COMMUNICATION Login System">
+
 <title>Login | LINK4 COMMUNICATION</title>
 
 
 <style>
+
+/* =========================================
+   RESET
+========================================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
+
+/* =========================================
+   BODY
+========================================= */
 
 body{
 
@@ -50,14 +61,74 @@ body{
 
     color:white;
 
+    overflow:hidden;
+
 }
 
 
-/* =================================
+/* =========================================
+   BACKGROUND EFFECT
+========================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+
+    height:420px;
+
+    background:#00c853;
+
+    opacity:0.07;
+
+    border-radius:50%;
+
+    top:-180px;
+
+    left:-150px;
+
+    filter:blur(90px);
+
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:420px;
+
+    height:420px;
+
+    background:#00e676;
+
+    opacity:0.06;
+
+    border-radius:50%;
+
+    bottom:-180px;
+
+    right:-150px;
+
+    filter:blur(90px);
+
+}
+
+
+/* =========================================
    LOGIN CARD
-================================= */
+========================================= */
 
 .login-card{
+
+    position:relative;
+
+    z-index:2;
 
     width:100%;
 
@@ -70,11 +141,14 @@ body{
 
     border:
     1px solid
-    rgba(255,255,255,0.12);
+    rgba(255,255,255,0.13);
 
-    border-radius:22px;
+    border-radius:24px;
 
     backdrop-filter:
+    blur(20px);
+
+    -webkit-backdrop-filter:
     blur(20px);
 
     box-shadow:
@@ -84,20 +158,20 @@ body{
 }
 
 
-/* =================================
+/* =========================================
    LOGO
-================================= */
+========================================= */
 
 .logo{
 
-    width:78px;
+    width:80px;
 
-    height:78px;
+    height:80px;
 
     margin:
     0 auto 20px;
 
-    border-radius:21px;
+    border-radius:22px;
 
     background:
     linear-gradient(
@@ -116,22 +190,26 @@ body{
 
     font-weight:bold;
 
+    color:white;
+
     box-shadow:
-    0 12px 30px
-    rgba(0,200,83,0.3);
+    0 12px 35px
+    rgba(0,200,83,0.30);
 
 }
 
 
-/* =================================
+/* =========================================
    TITLE
-================================= */
+========================================= */
 
 h1{
 
     text-align:center;
 
     font-size:28px;
+
+    font-weight:700;
 
     margin-bottom:8px;
 
@@ -146,14 +224,16 @@ h1{
 
     font-size:14px;
 
+    line-height:1.5;
+
     margin-bottom:32px;
 
 }
 
 
-/* =================================
-   INPUT
-================================= */
+/* =========================================
+   INPUT GROUP
+========================================= */
 
 .input-group{
 
@@ -172,7 +252,7 @@ label{
 
     font-size:14px;
 
-    font-weight:500;
+    font-weight:600;
 
 }
 
@@ -199,7 +279,7 @@ input{
     outline:none;
 
     transition:
-    0.3s;
+    0.3s ease;
 
 }
 
@@ -216,22 +296,73 @@ input:focus{
     border-color:
     #00e676;
 
+    background:
+    rgba(255,255,255,0.10);
+
     box-shadow:
     0 0 0 3px
-    rgba(0,230,118,0.1);
+    rgba(0,230,118,0.10);
 
 }
 
 
-/* =================================
+/* =========================================
+   PASSWORD WRAPPER
+========================================= */
+
+.password-wrapper{
+
+    position:relative;
+
+}
+
+
+.password-wrapper input{
+
+    padding-right:70px;
+
+}
+
+
+.show-password{
+
+    position:absolute;
+
+    right:12px;
+
+    top:50%;
+
+    transform:
+    translateY(-50%);
+
+    border:none;
+
+    background:transparent;
+
+    color:#00e676;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    padding:5px;
+
+}
+
+
+/* =========================================
    LOGIN BUTTON
-================================= */
+========================================= */
 
 .login-btn{
 
     width:100%;
 
     padding:15px;
+
+    margin-top:5px;
 
     border:none;
 
@@ -253,9 +384,11 @@ input:focus{
     cursor:pointer;
 
     transition:
-    0.3s;
+    0.3s ease;
 
-    margin-top:5px;
+    box-shadow:
+    0 8px 20px
+    rgba(0,200,83,0.20);
 
 }
 
@@ -267,7 +400,15 @@ input:focus{
 
     box-shadow:
     0 12px 30px
-    rgba(0,200,83,0.3);
+    rgba(0,200,83,0.35);
+
+}
+
+
+.login-btn:active{
+
+    transform:
+    translateY(0);
 
 }
 
@@ -278,12 +419,14 @@ input:focus{
 
     cursor:not-allowed;
 
+    transform:none;
+
 }
 
 
-/* =================================
+/* =========================================
    MESSAGE
-================================= */
+========================================= */
 
 .message{
 
@@ -294,6 +437,8 @@ input:focus{
     margin-top:18px;
 
     font-size:14px;
+
+    line-height:1.5;
 
 }
 
@@ -319,9 +464,9 @@ input:focus{
 }
 
 
-/* =================================
-   BACK
-================================= */
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 .back{
 
@@ -337,6 +482,8 @@ input:focus{
 
     text-decoration:none;
 
+    transition:0.3s;
+
 }
 
 
@@ -347,9 +494,9 @@ input:focus{
 }
 
 
-/* =================================
+/* =========================================
    FOOTER
-================================= */
+========================================= */
 
 .footer{
 
@@ -364,9 +511,9 @@ input:focus{
 }
 
 
-/* =================================
+/* =========================================
    MOBILE
-================================= */
+========================================= */
 
 @media(max-width:500px){
 
@@ -374,6 +521,15 @@ input:focus{
 
         padding:
         32px 22px;
+
+        border-radius:20px;
+
+    }
+
+
+    h1{
+
+        font-size:25px;
 
     }
 
@@ -384,13 +540,17 @@ input:focus{
 </head>
 
 
+
 <body>
+
 
 
 <div class="login-card">
 
 
-    <!-- LOGO -->
+    <!-- =================================
+         LOGO
+    ================================== -->
 
     <div class="logo">
 
@@ -400,7 +560,9 @@ input:focus{
 
 
 
-    <!-- TITLE -->
+    <!-- =================================
+         TITLE
+    ================================== -->
 
     <h1>
 
@@ -411,13 +573,15 @@ input:focus{
 
     <div class="subtitle">
 
-        Sign in to LINK4 COMMUNICATION
+        Sign in to your LINK4 COMMUNICATION account
 
     </div>
 
 
 
-    <!-- LOGIN FORM -->
+    <!-- =================================
+         LOGIN FORM
+    ================================== -->
 
     <form id="loginForm">
 
@@ -426,11 +590,12 @@ input:focus{
 
         <div class="input-group">
 
-            <label>
+            <label for="username">
 
                 Username
 
             </label>
+
 
             <input
 
@@ -438,7 +603,7 @@ input:focus{
 
                 id="username"
 
-                placeholder="Enter username"
+                placeholder="Enter your username"
 
                 autocomplete="username"
 
@@ -454,31 +619,53 @@ input:focus{
 
         <div class="input-group">
 
-            <label>
+            <label for="password">
 
                 Password
 
             </label>
 
-            <input
 
-                type="password"
+            <div class="password-wrapper">
 
-                id="password"
 
-                placeholder="Enter password"
+                <input
 
-                autocomplete="current-password"
+                    type="password"
 
-                required
+                    id="password"
 
-            >
+                    placeholder="Enter your password"
+
+                    autocomplete="current-password"
+
+                    required
+
+                >
+
+
+                <button
+
+                    type="button"
+
+                    class="show-password"
+
+                    id="showPassword"
+
+                >
+
+                    SHOW
+
+                </button>
+
+
+            </div>
 
         </div>
 
 
 
-        <!-- LOGIN -->
+        <!-- LOGIN BUTTON -->
 
         <button
 
@@ -499,7 +686,9 @@ input:focus{
 
 
 
-    <!-- MESSAGE -->
+    <!-- =================================
+         MESSAGE
+    ================================== -->
 
     <div
 
@@ -511,7 +700,9 @@ input:focus{
 
 
 
-    <!-- BACK -->
+    <!-- =================================
+         BACK TO HOME
+    ================================== -->
 
     <a
 
@@ -527,7 +718,9 @@ input:focus{
 
 
 
-    <!-- FOOTER -->
+    <!-- =================================
+         FOOTER
+    ================================== -->
 
     <div class="footer">
 
@@ -553,265 +746,337 @@ const API_URL =
 
 
 /* =========================================
+   SHOW / HIDE PASSWORD
+========================================= */
+
+document
+.getElementById("showPassword")
+.addEventListener(
+    "click",
+    function(){
+
+        const passwordInput =
+        document.getElementById(
+            "password"
+        );
+
+
+        if(
+            passwordInput.type ===
+            "password"
+        ){
+
+            passwordInput.type =
+            "text";
+
+            this.innerText =
+            "HIDE";
+
+        }
+
+        else{
+
+            passwordInput.type =
+            "password";
+
+            this.innerText =
+            "SHOW";
+
+        }
+
+    }
+);
+
+
+
+/* =========================================
    LOGIN FORM
 ========================================= */
 
 document
 .getElementById("loginForm")
 .addEventListener(
-"submit",
-function(event){
+    "submit",
+    function(event){
 
-    event.preventDefault();
-
-
-    /* GET INPUT */
-
-    const username =
-    document
-    .getElementById("username")
-    .value
-    .trim();
-
-
-    const password =
-    document
-    .getElementById("password")
-    .value
-    .trim();
-
-
-    const loginBtn =
-    document
-    .getElementById("loginBtn");
-
-
-    const message =
-    document
-    .getElementById("message");
+        event.preventDefault();
 
 
 
-    /* VALIDATION */
+        /* GET INPUT */
 
-    if(
-        !username ||
-        !password
-    ){
+        const username =
+        document
+        .getElementById("username")
+        .value
+        .trim();
 
-        message.className =
-        "message error";
 
-        message.innerText =
-        "Please enter username and password.";
-
-        return;
-
-    }
+        const password =
+        document
+        .getElementById("password")
+        .value
+        .trim();
 
 
 
-    /* LOADING */
+        /* GET ELEMENTS */
 
-    loginBtn.disabled =
-    true;
-
-    loginBtn.innerText =
-    "Checking...";
+        const loginBtn =
+        document
+        .getElementById("loginBtn");
 
 
-    message.className =
-    "message loading";
-
-    message.innerText =
-    "Verifying your account...";
+        const message =
+        document
+        .getElementById("message");
 
 
 
-    /* =====================================
-       SEND LOGIN REQUEST
-    ===================================== */
-
-    const url =
-
-    API_URL +
-
-    "?action=login" +
-
-    "&username=" +
-
-    encodeURIComponent(username) +
-
-    "&password=" +
-
-    encodeURIComponent(password);
-
-
-
-    fetch(url)
-
-    .then(function(response){
-
-        if(!response.ok){
-
-            throw new Error(
-                "Server error"
-            );
-
-        }
-
-        return response.json();
-
-    })
-
-
-    .then(function(data){
-
-
-        /* =================================
-           LOGIN SUCCESS
-        ================================= */
+        /* VALIDATION */
 
         if(
-            data.success === true
+            !username ||
+            !password
         ){
-
-
-            /* SAVE LOGIN STATUS */
-
-            localStorage.setItem(
-                "loggedIn",
-                "true"
-            );
-
-
-            /* SAVE USERNAME */
-
-            localStorage.setItem(
-                "username",
-                data.username ||
-                username
-            );
-
-
-            /* SAVE NAME */
-
-            localStorage.setItem(
-                "name",
-                data.name ||
-                ""
-            );
-
-
-            /* SAVE ROLE */
-
-            localStorage.setItem(
-                "role",
-                data.role ||
-                ""
-            );
-
-
-            /* SAVE STATUS */
-
-            localStorage.setItem(
-                "status",
-                data.status ||
-                ""
-            );
-
-
-
-            /* SUCCESS MESSAGE */
-
-            message.className =
-            "message success";
-
-            message.innerText =
-            "Login successful! Redirecting...";
-
-
-
-            /* REDIRECT */
-
-            setTimeout(function(){
-
-                window.location.href =
-                "dashboard.html";
-
-            },1000);
-
-
-        }
-
-
-        /* =================================
-           LOGIN FAILED
-        ================================= */
-
-        else{
-
 
             message.className =
             "message error";
 
-
             message.innerText =
+            "Please enter username and password.";
 
-            data.message ||
-
-            "Invalid username or password.";
-
-
-            loginBtn.disabled =
-            false;
-
-
-            loginBtn.innerText =
-            "Login";
-
+            return;
 
         }
 
-    })
 
 
-    /* =====================================
-       CONNECTION ERROR
-    ===================================== */
+        /* =================================
+           LOADING
+        ================================== */
 
-    .catch(function(error){
+        loginBtn.disabled =
+        true;
 
-
-        console.error(
-            "Login Error:",
-            error
-        );
+        loginBtn.innerText =
+        "Checking...";
 
 
         message.className =
-        "message error";
-
+        "message loading";
 
         message.innerText =
-
-        "Unable to connect to server. Please try again.";
-
-
-        loginBtn.disabled =
-        false;
+        "Verifying your account...";
 
 
-        loginBtn.innerText =
-        "Login";
+
+        /* =================================
+           CREATE API URL
+        ================================== */
+
+        const url =
+
+        API_URL +
+
+        "?action=login" +
+
+        "&username=" +
+
+        encodeURIComponent(
+            username
+        ) +
+
+        "&password=" +
+
+        encodeURIComponent(
+            password
+        );
 
 
-    });
+
+        /* =================================
+           SEND REQUEST
+        ================================== */
+
+        fetch(url)
+
+        .then(
+            function(response){
+
+                if(
+                    !response.ok
+                ){
+
+                    throw new Error(
+                        "Server Error"
+                    );
+
+                }
 
 
-});
+                return response.json();
+
+            }
+        )
+
+
+        .then(
+            function(data){
+
+
+                /* =================================
+                   LOGIN SUCCESS
+                ================================== */
+
+                if(
+                    data.success === true
+                ){
+
+
+                    /* SAVE LOGIN STATUS */
+
+                    localStorage.setItem(
+                        "loggedIn",
+                        "true"
+                    );
+
+
+                    /* SAVE USERNAME */
+
+                    localStorage.setItem(
+                        "username",
+                        data.username ||
+                        username
+                    );
+
+
+                    /* SAVE NAME */
+
+                    localStorage.setItem(
+                        "name",
+                        data.name ||
+                        ""
+                    );
+
+
+                    /* SAVE ROLE */
+
+                    localStorage.setItem(
+                        "role",
+                        data.role ||
+                        ""
+                    );
+
+
+                    /* SAVE STATUS */
+
+                    localStorage.setItem(
+                        "status",
+                        data.status ||
+                        ""
+                    );
+
+
+
+                    /* SUCCESS MESSAGE */
+
+                    message.className =
+                    "message success";
+
+                    message.innerText =
+                    "Login successful! Redirecting...";
+
+
+
+                    /* REDIRECT DASHBOARD */
+
+                    setTimeout(
+                        function(){
+
+                            window.location.href =
+                            "dashboard.html";
+
+                        },
+                        800
+                    );
+
+
+                }
+
+
+                /* =================================
+                   LOGIN FAILED
+                ================================== */
+
+                else{
+
+
+                    message.className =
+                    "message error";
+
+
+                    message.innerText =
+
+                    data.message ||
+
+                    "Invalid username or password.";
+
+
+                    loginBtn.disabled =
+                    false;
+
+
+                    loginBtn.innerText =
+                    "Login";
+
+
+                }
+
+            }
+        )
+
+
+        /* =================================
+           CONNECTION ERROR
+        ================================== */
+
+        .catch(
+            function(error){
+
+
+                console.error(
+                    "Login Error:",
+                    error
+                );
+
+
+                message.className =
+                "message error";
+
+
+                message.innerText =
+
+                "Unable to connect to server. Please try again.";
+
+
+                loginBtn.disabled =
+                false;
+
+
+                loginBtn.innerText =
+                "Login";
+
+
+            }
+        );
+
+
+    }
+);
 
 </script>
+
 
 
 </body>
