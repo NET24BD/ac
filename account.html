@@ -8,11 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color"
-content="#07111f">
-
 <title>My Account | LINK4 COMMUNICATION</title>
-
 
 <style>
 
@@ -21,13 +17,9 @@ content="#07111f">
 ===================================================== */
 
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
 }
 
 
@@ -40,52 +32,29 @@ body{
     min-height:100vh;
 
     font-family:
+    "Segoe UI",
     Arial,
-    Helvetica,
     sans-serif;
 
-    background:
+    background:#f5f7fa;
 
-    radial-gradient(
-        circle at top left,
-        rgba(0,230,118,0.08),
-        transparent 35%
-    ),
-
-    linear-gradient(
-        135deg,
-        #07111f 0%,
-        #0b2d25 50%,
-        #07111f 100%
-    );
-
-    color:#ffffff;
-
-    padding:25px;
+    color:#1f2937;
 
 }
 
 
 /* =====================================================
-   MAIN CONTAINER
+   TOP NAVBAR
 ===================================================== */
 
-.container{
+.navbar{
 
-    width:100%;
+    height:70px;
 
-    max-width:1000px;
+    background:#ffffff;
 
-    margin:0 auto;
-
-}
-
-
-/* =====================================================
-   TOP BAR
-===================================================== */
-
-.topbar{
+    border-bottom:
+    1px solid #e5e7eb;
 
     display:flex;
 
@@ -93,63 +62,163 @@ body{
 
     justify-content:space-between;
 
-    gap:20px;
+    padding:
+    0 35px;
 
-    margin-bottom:25px;
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.brand-logo{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+
+.brand-text{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    letter-spacing:
+    0.3px;
 
 }
 
 
 .back-btn{
 
-    display:inline-flex;
+    display:flex;
 
     align-items:center;
 
     gap:8px;
 
-    padding:
-    11px 17px;
-
-    border-radius:10px;
-
     text-decoration:none;
 
-    color:#c5d0d9;
-
-    background:
-    rgba(255,255,255,0.06);
-
-    border:
-    1px solid
-    rgba(255,255,255,0.10);
+    color:#4b5563;
 
     font-size:14px;
 
+    font-weight:600;
+
+    padding:
+    10px 16px;
+
+    border:
+    1px solid #e5e7eb;
+
+    border-radius:9px;
+
+    background:#ffffff;
+
     transition:
-    0.3s ease;
+    0.25s ease;
 
 }
 
 
 .back-btn:hover{
 
-    color:#ffffff;
+    color:#0f766e;
 
-    border-color:
-    #00e676;
+    border-color:#14b8a6;
 
-    background:
-    rgba(0,230,118,0.08);
+    background:#f0fdfa;
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:
+    35px 25px 50px;
+
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-header{
+
+    margin-bottom:28px;
 
 }
 
 
 .page-title{
 
-    font-size:25px;
+    font-size:28px;
 
     font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:7px;
+
+}
+
+
+.page-subtitle{
+
+    font-size:14px;
+
+    color:#6b7280;
 
 }
 
@@ -160,9 +229,14 @@ body{
 
 .profile-card{
 
-    position:relative;
+    background:#ffffff;
 
-    overflow:hidden;
+    border:
+    1px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:30px;
 
     display:flex;
 
@@ -170,66 +244,38 @@ body{
 
     gap:25px;
 
-    padding:32px;
+    box-shadow:
+    0 5px 20px
+    rgba(15,23,42,0.05);
 
     margin-bottom:25px;
-
-    border-radius:24px;
-
-    background:
-    rgba(255,255,255,0.07);
-
-    border:
-    1px solid
-    rgba(255,255,255,0.12);
-
-    box-shadow:
-    0 20px 55px
-    rgba(0,0,0,0.28);
-
-    backdrop-filter:
-    blur(15px);
-
-}
-
-
-.profile-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:200px;
-
-    height:200px;
-
-    right:-80px;
-
-    top:-90px;
-
-    border-radius:50%;
-
-    background:
-    rgba(0,230,118,0.08);
 
 }
 
 
 /* =====================================================
-   AVATAR
+   PROFILE AVATAR
 ===================================================== */
 
 .avatar{
 
-    position:relative;
+    width:88px;
 
-    z-index:2;
+    height:88px;
 
-    width:90px;
-
-    height:90px;
+    border-radius:18px;
 
     flex-shrink:0;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    color:white;
 
     display:flex;
 
@@ -237,48 +283,32 @@ body{
 
     justify-content:center;
 
-    border-radius:24px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #00c853,
-        #00e676
-    );
-
-    color:#ffffff;
-
-    font-size:34px;
+    font-size:32px;
 
     font-weight:700;
 
     box-shadow:
 
-    0 12px 30px
-    rgba(0,200,83,0.30);
+    0 8px 20px
+    rgba(15,118,110,0.20);
 
 }
 
 
-/* =====================================================
-   PROFILE TEXT
-===================================================== */
+.profile-content{
 
-.profile-info{
-
-    position:relative;
-
-    z-index:2;
+    flex:1;
 
 }
 
 
 .profile-name{
 
-    font-size:29px;
+    font-size:25px;
 
     font-weight:700;
+
+    color:#111827;
 
     margin-bottom:7px;
 
@@ -287,9 +317,9 @@ body{
 
 .profile-role{
 
-    color:#00e676;
+    font-size:14px;
 
-    font-size:15px;
+    color:#0f766e;
 
     font-weight:600;
 
@@ -298,21 +328,22 @@ body{
 }
 
 
-.profile-status{
+.status-badge{
 
     display:inline-flex;
 
     align-items:center;
 
+    gap:7px;
+
     padding:
-    6px 13px;
+    6px 12px;
 
     border-radius:20px;
 
-    background:
-    rgba(0,230,118,0.12);
+    background:#ecfdf5;
 
-    color:#00e676;
+    color:#047857;
 
     font-size:12px;
 
@@ -321,23 +352,15 @@ body{
 }
 
 
-/* =====================================================
-   STATUS DOT
-===================================================== */
-
-.profile-status::before{
-
-    content:"";
+.status-dot{
 
     width:7px;
 
     height:7px;
 
-    margin-right:7px;
-
     border-radius:50%;
 
-    background:#00e676;
+    background:#10b981;
 
 }
 
@@ -348,22 +371,21 @@ body{
 
 .section{
 
+    background:#ffffff;
+
+    border:
+    1px solid #e5e7eb;
+
+    border-radius:16px;
+
     padding:28px;
 
     margin-bottom:25px;
 
-    border-radius:22px;
-
-    background:
-    rgba(255,255,255,0.06);
-
-    border:
-    1px solid
-    rgba(255,255,255,0.10);
-
     box-shadow:
-    0 15px 40px
-    rgba(0,0,0,0.18);
+
+    0 5px 20px
+    rgba(15,23,42,0.04);
 
 }
 
@@ -376,39 +398,38 @@ body{
 
     justify-content:space-between;
 
-    gap:15px;
-
     padding-bottom:18px;
 
     margin-bottom:22px;
 
     border-bottom:
-    1px solid
-    rgba(255,255,255,0.08);
+    1px solid #f0f1f3;
 
 }
 
 
 .section-title{
 
-    font-size:20px;
+    font-size:18px;
 
     font-weight:700;
+
+    color:#111827;
 
 }
 
 
-.section-subtitle{
-
-    color:#7f8d99;
+.section-label{
 
     font-size:12px;
+
+    color:#9ca3af;
 
 }
 
 
 /* =====================================================
-   INFORMATION GRID
+   INFO GRID
 ===================================================== */
 
 .info-grid{
@@ -416,77 +437,66 @@ body{
     display:grid;
 
     grid-template-columns:
-    repeat(2, 1fr);
+    repeat(2,1fr);
 
-    gap:16px;
+    gap:15px;
 
 }
 
 
 .info-box{
 
-    min-height:88px;
+    padding:18px;
 
-    padding:19px;
-
-    border-radius:15px;
-
-    background:
-    rgba(255,255,255,0.045);
+    background:#f9fafb;
 
     border:
-    1px solid
-    rgba(255,255,255,0.07);
+    1px solid #eef0f2;
+
+    border-radius:12px;
 
     transition:
-    0.3s ease;
+    0.25s ease;
 
 }
 
 
 .info-box:hover{
 
-    transform:
-    translateY(-2px);
+    border-color:#99f6e4;
 
-    border-color:
-    rgba(0,230,118,0.25);
-
-    background:
-    rgba(0,230,118,0.045);
+    background:#f0fdfa;
 
 }
 
 
 .info-label{
 
-    margin-bottom:9px;
-
-    color:#81909c;
-
     font-size:11px;
 
-    font-weight:600;
+    font-weight:700;
+
+    color:#9ca3af;
 
     text-transform:uppercase;
 
     letter-spacing:
-    0.7px;
+    0.5px;
+
+    margin-bottom:8px;
 
 }
 
 
 .info-value{
 
-    color:#ffffff;
-
     font-size:15px;
 
     font-weight:600;
 
-    word-break:break-word;
+    color:#1f2937;
 
-    line-height:1.5;
+    word-break:break-word;
 
 }
 
@@ -501,31 +511,30 @@ body{
 
     padding:35px;
 
-    color:#9ba8b3;
+    color:#6b7280;
 
     font-size:14px;
 
 }
 
 
-.loading-spinner{
+.spinner{
 
     width:30px;
 
     height:30px;
 
-    margin:
-    0 auto 15px;
-
     border:
 
-    3px solid
-    rgba(255,255,255,0.12);
+    3px solid #e5e7eb;
 
     border-top-color:
-    #00e676;
+    #0f766e;
 
     border-radius:50%;
+
+    margin:
+    0 auto 15px;
 
     animation:
     spin 0.8s linear infinite;
@@ -553,22 +562,20 @@ body{
 
     display:none;
 
-    padding:20px;
+    padding:18px;
 
-    border-radius:14px;
+    border-radius:10px;
 
-    background:
-    rgba(255,80,80,0.08);
+    background:#fef2f2;
 
     border:
-    1px solid
-    rgba(255,80,80,0.18);
+    1px solid #fecaca;
 
-    color:#ff8a8a;
+    color:#b91c1c;
+
+    font-size:14px;
 
     text-align:center;
-
-    line-height:1.6;
 
 }
 
@@ -577,44 +584,46 @@ body{
    LOGOUT
 ===================================================== */
 
+.logout-section{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+
 .logout-btn{
 
-    width:100%;
-
-    padding:15px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:
-    rgba(255,80,80,0.10);
+    padding:
+    11px 22px;
 
     border:
-    1px solid
-    rgba(255,80,80,0.20);
+    1px solid #fecaca;
 
-    color:#ff7777;
+    border-radius:9px;
 
-    font-size:15px;
+    background:#ffffff;
 
-    font-weight:700;
+    color:#dc2626;
+
+    font-size:14px;
+
+    font-weight:600;
 
     cursor:pointer;
 
     transition:
-    0.3s ease;
+    0.25s ease;
 
 }
 
 
 .logout-btn:hover{
 
-    background:
-    rgba(255,80,80,0.20);
+    background:#fef2f2;
 
-    transform:
-    translateY(-2px);
+    border-color:#f87171;
 
 }
 
@@ -625,50 +634,51 @@ body{
 
 @media(max-width:700px){
 
-    body{
+    .navbar{
 
-        padding:15px;
+        padding:
+        0 18px;
 
     }
 
 
-    .topbar{
+    .brand-text{
 
-        align-items:
-        flex-start;
+        font-size:15px;
+
+    }
+
+
+    .page{
+
+        padding:
+        25px 15px 40px;
 
     }
 
 
     .page-title{
 
-        font-size:21px;
+        font-size:23px;
 
     }
 
 
     .profile-card{
 
+        padding:22px;
+
         flex-direction:
         column;
 
         text-align:center;
-
-        padding:28px 20px;
-
-    }
-
-
-    .profile-status{
-
-        justify-content:center;
 
     }
 
 
     .section{
 
-        padding:22px;
+        padding:20px;
 
     }
 
@@ -680,31 +690,16 @@ body{
 
     }
 
-}
 
+    .section-header{
 
-@media(max-width:420px){
+        align-items:
+        flex-start;
 
-    .topbar{
+        gap:8px;
 
         flex-direction:
-        column-reverse;
-
-    }
-
-
-    .page-title{
-
-        align-self:
-        flex-start;
-
-    }
-
-
-    .back-btn{
-
-        align-self:
-        flex-start;
+        column;
 
     }
 
@@ -715,34 +710,72 @@ body{
 </head>
 
 
-
 <body>
 
 
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-<div class="container">
-
-
-    <!-- =================================================
-         TOP BAR
-    ================================================== -->
-
-    <div class="topbar">
+<nav class="navbar">
 
 
-        <a
-            href="dashboard.html"
-            class="back-btn"
-        >
+    <div class="brand">
 
-            ← Dashboard
 
-        </a>
+        <div class="brand-logo">
+
+            L4
+
+        </div>
+
+
+        <div class="brand-text">
+
+            LINK4 COMMUNICATION
+
+        </div>
+
+
+    </div>
+
+
+    <a
+        href="dashboard.html"
+        class="back-btn"
+    >
+
+        ← Dashboard
+
+    </a>
+
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN PAGE
+===================================================== -->
+
+<main class="page">
+
+
+    <!-- PAGE HEADER -->
+
+    <div class="page-header">
 
 
         <div class="page-title">
 
             My Account
+
+        </div>
+
+
+        <div class="page-subtitle">
+
+            Manage and view your personal account information
 
         </div>
 
@@ -768,7 +801,7 @@ body{
         </div>
 
 
-        <div class="profile-info">
+        <div class="profile-content">
 
 
             <div
@@ -791,12 +824,22 @@ body{
             </div>
 
 
-            <div
-                class="profile-status"
-                id="profileStatus"
-            >
+            <div class="status-badge">
 
-                Loading...
+
+                <span
+                    class="status-dot"
+                ></span>
+
+
+                <span
+                    id="profileStatus"
+                >
+
+                    Loading...
+
+                </span>
+
 
             </div>
 
@@ -825,9 +868,9 @@ body{
             </div>
 
 
-            <div class="section-subtitle">
+            <div class="section-label">
 
-                Basic account details
+                Account Overview
 
             </div>
 
@@ -909,7 +952,7 @@ body{
 
                 <div class="info-label">
 
-                    Status
+                    Account Status
 
                 </div>
 
@@ -950,9 +993,9 @@ body{
             </div>
 
 
-            <div class="section-subtitle">
+            <div class="section-label">
 
-                Your personal profile details
+                Employee Profile
 
             </div>
 
@@ -961,24 +1004,23 @@ body{
 
 
 
-        <!-- LOADING -->
-
         <div
             class="loading"
             id="loading"
         >
 
+
             <div
-                class="loading-spinner"
+                class="spinner"
             ></div>
 
-            Loading your profile information...
+
+            Loading personal information...
+
 
         </div>
 
 
-
-        <!-- ERROR -->
 
         <div
             class="error-box"
@@ -987,16 +1029,12 @@ body{
 
 
 
-        <!-- PERSONAL DATA -->
-
         <div
             class="info-grid"
             id="personalGrid"
             style="display:none;"
         >
 
-
-            <!-- PHONE -->
 
             <div class="info-box">
 
@@ -1005,6 +1043,7 @@ body{
                     Phone
 
                 </div>
+
 
                 <div
                     class="info-value"
@@ -1019,8 +1058,6 @@ body{
 
 
 
-            <!-- EMAIL -->
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1028,6 +1065,7 @@ body{
                     Email
 
                 </div>
+
 
                 <div
                     class="info-value"
@@ -1042,8 +1080,6 @@ body{
 
 
 
-            <!-- DEPARTMENT -->
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1051,6 +1087,7 @@ body{
                     Department
 
                 </div>
+
 
                 <div
                     class="info-value"
@@ -1065,8 +1102,6 @@ body{
 
 
 
-            <!-- DESIGNATION -->
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1074,6 +1109,7 @@ body{
                     Designation
 
                 </div>
+
 
                 <div
                     class="info-value"
@@ -1088,8 +1124,6 @@ body{
 
 
 
-            <!-- EMPLOYEE ID -->
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1097,6 +1131,7 @@ body{
                     Employee ID
 
                 </div>
+
 
                 <div
                     class="info-value"
@@ -1111,19 +1146,18 @@ body{
 
 
 
-            <!-- ADDRESS -->
-
             <div class="info-box">
 
                 <div class="info-label">
 
-                    Address
+                    Location
 
                 </div>
 
+
                 <div
                     class="info-value"
-                    id="address"
+                    id="location"
                 >
 
                     -
@@ -1134,8 +1168,6 @@ body{
 
 
 
-            <!-- JOINING DATE -->
-
             <div class="info-box">
 
                 <div class="info-label">
@@ -1143,6 +1175,7 @@ body{
                     Joining Date
 
                 </div>
+
 
                 <div
                     class="info-value"
@@ -1157,19 +1190,18 @@ body{
 
 
 
-            <!-- LOCATION -->
-
             <div class="info-box">
 
                 <div class="info-label">
 
-                    Location
+                    Address
 
                 </div>
 
+
                 <div
                     class="info-value"
-                    id="location"
+                    id="address"
                 >
 
                     -
@@ -1190,7 +1222,7 @@ body{
          LOGOUT
     ================================================== -->
 
-    <div class="section">
+    <div class="logout-section">
 
 
         <button
@@ -1206,7 +1238,7 @@ body{
     </div>
 
 
-</div>
+</main>
 
 
 
@@ -1214,7 +1246,7 @@ body{
 
 
 /* =====================================================
-   GOOGLE APPS SCRIPT API URL
+   API URL
 ===================================================== */
 
 const API_URL =
@@ -1227,15 +1259,12 @@ const API_URL =
    LOGIN SECURITY
 ===================================================== */
 
-const loggedIn =
-
-localStorage.getItem(
-    "loggedIn"
-);
-
-
 if(
-    loggedIn !== "true"
+
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+
 ){
 
     window.location.href =
@@ -1246,7 +1275,7 @@ if(
 
 
 /* =====================================================
-   GET LOGIN USER DATA
+   LOGIN DATA
 ===================================================== */
 
 const username =
@@ -1279,7 +1308,7 @@ localStorage.getItem(
 
 
 /* =====================================================
-   SHOW BASIC ACCOUNT INFORMATION
+   BASIC INFORMATION
 ===================================================== */
 
 document
@@ -1297,7 +1326,7 @@ document
 )
 .innerText =
 
-username || "-";
+username;
 
 
 document
@@ -1320,7 +1349,7 @@ loginStatus;
 
 
 /* =====================================================
-   SHOW PROFILE HEADER
+   PROFILE HEADER
 ===================================================== */
 
 document
@@ -1368,10 +1397,10 @@ loginName
 
 
 /* =====================================================
-   LOAD USER PROFILE
+   LOAD PROFILE
 ===================================================== */
 
-function loadUserProfile(){
+function loadProfile(){
 
 
     if(!username){
@@ -1386,17 +1415,11 @@ function loadUserProfile(){
 
 
 
-    /* ================================================
-       CREATE PROFILE API URL
-    ================================================= */
-
     const url =
 
     API_URL +
 
-    "?action=profile" +
-
-    "&username=" +
+    "?action=profile&username=" +
 
     encodeURIComponent(
         username
@@ -1404,40 +1427,16 @@ function loadUserProfile(){
 
 
 
-    /* ================================================
-       FETCH PROFILE
-    ================================================= */
-
     fetch(url)
 
     .then(
-        function(response){
-
-            if(
-                !response.ok
-            ){
-
-                throw new Error(
-                    "Server error: "
-                    + response.status
-                );
-
-            }
-
-
-            return response.json();
-
-        }
+        response =>
+        response.json()
     )
 
-
     .then(
-        function(data){
+        data => {
 
-
-            /* =========================================
-               API ERROR
-            ========================================== */
 
             if(
                 data.success !== true
@@ -1447,7 +1446,7 @@ function loadUserProfile(){
 
                     data.message ||
 
-                    "Profile information could not be loaded."
+                    "Unable to load profile information."
 
                 );
 
@@ -1458,19 +1457,16 @@ function loadUserProfile(){
 
 
             /* =========================================
-               UPDATE BASIC INFORMATION
+               UPDATE BASIC DATA
             ========================================== */
 
-            if(
-                data.name
-            ){
+            if(data.name){
 
                 document
                 .getElementById(
                     "name"
                 )
                 .innerText =
-
                 data.name;
 
 
@@ -1479,7 +1475,6 @@ function loadUserProfile(){
                     "profileName"
                 )
                 .innerText =
-
                 data.name;
 
 
@@ -1496,16 +1491,14 @@ function loadUserProfile(){
             }
 
 
-            if(
-                data.role
-            ){
+
+            if(data.role){
 
                 document
                 .getElementById(
                     "role"
                 )
                 .innerText =
-
                 data.role;
 
 
@@ -1514,22 +1507,19 @@ function loadUserProfile(){
                     "profileRole"
                 )
                 .innerText =
-
                 data.role;
 
             }
 
 
-            if(
-                data.status
-            ){
+
+            if(data.status){
 
                 document
                 .getElementById(
                     "status"
                 )
                 .innerText =
-
                 data.status;
 
 
@@ -1538,7 +1528,6 @@ function loadUserProfile(){
                     "profileStatus"
                 )
                 .innerText =
-
                 data.status;
 
             }
@@ -1546,37 +1535,20 @@ function loadUserProfile(){
 
 
             /* =========================================
-               GET PROFILE OBJECT
+               PROFILE DATA
             ========================================== */
 
             const profile =
-
             data.profile || {};
 
 
 
-            /* =========================================
-               LOAD PERSONAL INFORMATION
-
-               Supports:
-               Phone
-               Email
-               Department
-               Designation
-               Employee ID
-               Address
-               Joining Date
-               Location
-            ========================================== */
-
-
             setValue(
                 "phone",
-                getProfileValue(
+                getValue(
                     profile,
                     [
                         "Phone",
-                        "phone",
                         "Phone Number"
                     ]
                 )
@@ -1585,11 +1557,10 @@ function loadUserProfile(){
 
             setValue(
                 "email",
-                getProfileValue(
+                getValue(
                     profile,
                     [
                         "Email",
-                        "email",
                         "Gmail"
                     ]
                 )
@@ -1598,11 +1569,10 @@ function loadUserProfile(){
 
             setValue(
                 "department",
-                getProfileValue(
+                getValue(
                     profile,
                     [
-                        "Department",
-                        "department"
+                        "Department"
                     ]
                 )
             );
@@ -1610,11 +1580,10 @@ function loadUserProfile(){
 
             setValue(
                 "designation",
-                getProfileValue(
+                getValue(
                     profile,
                     [
-                        "Designation",
-                        "designation"
+                        "Designation"
                     ]
                 )
             );
@@ -1622,12 +1591,11 @@ function loadUserProfile(){
 
             setValue(
                 "employeeId",
-                getProfileValue(
+                getValue(
                     profile,
                     [
                         "Employee ID",
                         "EmployeeID",
-                        "employeeId",
                         "ID"
                     ]
                 )
@@ -1635,12 +1603,11 @@ function loadUserProfile(){
 
 
             setValue(
-                "address",
-                getProfileValue(
+                "location",
+                getValue(
                     profile,
                     [
-                        "Address",
-                        "address"
+                        "Location"
                     ]
                 )
             );
@@ -1648,24 +1615,22 @@ function loadUserProfile(){
 
             setValue(
                 "joiningDate",
-                getProfileValue(
+                getValue(
                     profile,
                     [
                         "Joining Date",
-                        "JoiningDate",
-                        "joiningDate"
+                        "JoiningDate"
                     ]
                 )
             );
 
 
             setValue(
-                "location",
-                getProfileValue(
+                "address",
+                getValue(
                     profile,
                     [
-                        "Location",
-                        "location"
+                        "Address"
                     ]
                 )
             );
@@ -1684,11 +1649,6 @@ function loadUserProfile(){
             "none";
 
 
-
-            /* =========================================
-               SHOW PERSONAL GRID
-            ========================================== */
-
             document
             .getElementById(
                 "personalGrid"
@@ -1697,25 +1657,26 @@ function loadUserProfile(){
             "grid";
 
         }
+
     )
 
-
     .catch(
-        function(error){
+
+        error => {
 
             console.error(
-                "Profile Error:",
                 error
             );
 
 
             showError(
 
-                "Unable to load profile information. Please try again."
+                "Unable to connect to server. Please try again."
 
             );
 
         }
+
     );
 
 }
@@ -1723,14 +1684,13 @@ function loadUserProfile(){
 
 
 /* =====================================================
-   GET PROFILE VALUE
+   GET VALUE
 ===================================================== */
 
-function getProfileValue(
+function getValue(
     profile,
     keys
 ){
-
 
     for(
         let i = 0;
@@ -1741,11 +1701,11 @@ function getProfileValue(
     ){
 
         if(
-            profile[keys[i]] !== undefined &&
-            profile[keys[i]] !== null &&
-            String(
-                profile[keys[i]]
-            ).trim() !== ""
+
+            profile[
+                keys[i]
+            ] !== undefined
+
         ){
 
             return profile[
@@ -1768,14 +1728,13 @@ function getProfileValue(
 ===================================================== */
 
 function setValue(
-    elementId,
+    id,
     value
 ){
 
-
     document
     .getElementById(
-        elementId
+        id
     )
     .innerText =
 
@@ -1786,13 +1745,12 @@ function setValue(
 
 
 /* =====================================================
-   SHOW ERROR
+   ERROR
 ===================================================== */
 
 function showError(
     message
 ){
-
 
     document
     .getElementById(
@@ -1802,7 +1760,7 @@ function showError(
     "none";
 
 
-    const errorBox =
+    const box =
 
     document
     .getElementById(
@@ -1810,11 +1768,11 @@ function showError(
     );
 
 
-    errorBox.style.display =
+    box.style.display =
     "block";
 
 
-    errorBox.innerText =
+    box.innerText =
     message;
 
 }
@@ -1827,9 +1785,7 @@ function showError(
 
 function logout(){
 
-
     localStorage.clear();
-
 
     window.location.href =
     "login.html";
@@ -1839,10 +1795,10 @@ function logout(){
 
 
 /* =====================================================
-   START PROFILE LOADING
+   START
 ===================================================== */
 
-loadUserProfile();
+loadProfile();
 
 </script>
 
