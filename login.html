@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +22,6 @@ content="#07111f">
     padding:0;
     box-sizing:border-box;
 }
-
 
 body{
 
@@ -53,7 +53,9 @@ body{
 }
 
 
-/* Login Card */
+/* =================================
+   LOGIN CARD
+================================= */
 
 .login-card{
 
@@ -61,7 +63,7 @@ body{
 
     max-width:420px;
 
-    padding:40px 32px;
+    padding:42px 32px;
 
     background:
     rgba(255,255,255,0.07);
@@ -82,18 +84,20 @@ body{
 }
 
 
-/* Logo */
+/* =================================
+   LOGO
+================================= */
 
 .logo{
 
-    width:75px;
+    width:78px;
 
-    height:75px;
+    height:78px;
 
     margin:
     0 auto 20px;
 
-    border-radius:20px;
+    border-radius:21px;
 
     background:
     linear-gradient(
@@ -108,7 +112,7 @@ body{
 
     justify-content:center;
 
-    font-size:26px;
+    font-size:27px;
 
     font-weight:bold;
 
@@ -119,7 +123,9 @@ body{
 }
 
 
-/* Title */
+/* =================================
+   TITLE
+================================= */
 
 h1{
 
@@ -145,7 +151,9 @@ h1{
 }
 
 
-/* Input Group */
+/* =================================
+   INPUT
+================================= */
 
 .input-group{
 
@@ -215,7 +223,9 @@ input:focus{
 }
 
 
-/* Login Button */
+/* =================================
+   LOGIN BUTTON
+================================= */
 
 .login-btn{
 
@@ -262,14 +272,6 @@ input:focus{
 }
 
 
-.login-btn:active{
-
-    transform:
-    translateY(0);
-
-}
-
-
 .login-btn:disabled{
 
     opacity:0.6;
@@ -279,7 +281,9 @@ input:focus{
 }
 
 
-/* Message */
+/* =================================
+   MESSAGE
+================================= */
 
 .message{
 
@@ -308,7 +312,16 @@ input:focus{
 }
 
 
-/* Back Button */
+.loading{
+
+    color:#ffc107;
+
+}
+
+
+/* =================================
+   BACK
+================================= */
 
 .back{
 
@@ -334,7 +347,9 @@ input:focus{
 }
 
 
-/* Footer */
+/* =================================
+   FOOTER
+================================= */
 
 .footer{
 
@@ -349,7 +364,9 @@ input:focus{
 }
 
 
-/* Mobile */
+/* =================================
+   MOBILE
+================================= */
 
 @media(max-width:500px){
 
@@ -367,15 +384,13 @@ input:focus{
 </head>
 
 
-
 <body>
-
 
 
 <div class="login-card">
 
 
-    <!-- Logo -->
+    <!-- LOGO -->
 
     <div class="logo">
 
@@ -385,7 +400,7 @@ input:focus{
 
 
 
-    <!-- Title -->
+    <!-- TITLE -->
 
     <h1>
 
@@ -402,12 +417,12 @@ input:focus{
 
 
 
-    <!-- Login Form -->
+    <!-- LOGIN FORM -->
 
     <form id="loginForm">
 
 
-        <!-- Username -->
+        <!-- USERNAME -->
 
         <div class="input-group">
 
@@ -435,7 +450,7 @@ input:focus{
 
 
 
-        <!-- Password -->
+        <!-- PASSWORD -->
 
         <div class="input-group">
 
@@ -463,7 +478,7 @@ input:focus{
 
 
 
-        <!-- Button -->
+        <!-- LOGIN -->
 
         <button
 
@@ -484,7 +499,7 @@ input:focus{
 
 
 
-    <!-- Message -->
+    <!-- MESSAGE -->
 
     <div
 
@@ -496,7 +511,7 @@ input:focus{
 
 
 
-    <!-- Back -->
+    <!-- BACK -->
 
     <a
 
@@ -512,7 +527,7 @@ input:focus{
 
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
 
     <div class="footer">
 
@@ -529,15 +544,17 @@ input:focus{
 
 
 /* =========================================
-   TEST LOGIN
-   TEMPORARY USERNAME & PASSWORD
+   GOOGLE APPS SCRIPT WEB APP URL
 ========================================= */
 
-const TEST_USERNAME = "admin";
+const API_URL =
+"https://script.google.com/macros/s/AKfycbxfUUdFpRqIckbcxPuJRqUICnbjJQXhVW63P9TegivLB8ORSTFEMBkdIG8w7K2KvpBZow/exec";
 
-const TEST_PASSWORD = "12345";
 
 
+/* =========================================
+   LOGIN FORM
+========================================= */
 
 document
 .getElementById("loginForm")
@@ -545,17 +562,16 @@ document
 "submit",
 function(event){
 
-
     event.preventDefault();
 
 
+    /* GET INPUT */
 
     const username =
     document
     .getElementById("username")
     .value
     .trim();
-
 
 
     const password =
@@ -565,11 +581,9 @@ function(event){
     .trim();
 
 
-
-    const button =
+    const loginBtn =
     document
     .getElementById("loginBtn");
-
 
 
     const message =
@@ -578,42 +592,92 @@ function(event){
 
 
 
-    /* Loading */
+    /* VALIDATION */
 
-    button.disabled = true;
+    if(
+        !username ||
+        !password
+    ){
 
-    button.innerText =
+        message.className =
+        "message error";
+
+        message.innerText =
+        "Please enter username and password.";
+
+        return;
+
+    }
+
+
+
+    /* LOADING */
+
+    loginBtn.disabled =
+    true;
+
+    loginBtn.innerText =
     "Checking...";
 
 
-
     message.className =
-    "message";
+    "message loading";
 
     message.innerText =
-    "Please wait...";
+    "Verifying your account...";
 
 
 
-    /* Test Login */
+    /* =====================================
+       SEND LOGIN REQUEST
+    ===================================== */
 
-    setTimeout(function(){
+    const url =
 
+    API_URL +
+
+    "?action=login" +
+
+    "&username=" +
+
+    encodeURIComponent(username) +
+
+    "&password=" +
+
+    encodeURIComponent(password);
+
+
+
+    fetch(url)
+
+    .then(function(response){
+
+        if(!response.ok){
+
+            throw new Error(
+                "Server error"
+            );
+
+        }
+
+        return response.json();
+
+    })
+
+
+    .then(function(data){
+
+
+        /* =================================
+           LOGIN SUCCESS
+        ================================= */
 
         if(
-
-            username ===
-            TEST_USERNAME
-
-            &&
-
-            password ===
-            TEST_PASSWORD
-
+            data.success === true
         ){
 
 
-            /* Save Login */
+            /* SAVE LOGIN STATUS */
 
             localStorage.setItem(
                 "loggedIn",
@@ -621,55 +685,69 @@ function(event){
             );
 
 
+            /* SAVE USERNAME */
+
             localStorage.setItem(
                 "username",
+                data.username ||
                 username
             );
 
 
+            /* SAVE NAME */
+
             localStorage.setItem(
                 "name",
-                "Administrator"
+                data.name ||
+                ""
             );
 
+
+            /* SAVE ROLE */
 
             localStorage.setItem(
                 "role",
-                "Admin"
+                data.role ||
+                ""
             );
 
+
+            /* SAVE STATUS */
 
             localStorage.setItem(
                 "status",
-                "Active"
+                data.status ||
+                ""
             );
 
 
+
+            /* SUCCESS MESSAGE */
 
             message.className =
             "message success";
 
-
             message.innerText =
-            "Login successful!";
+            "Login successful! Redirecting...";
 
 
 
-            /* Dashboard */
+            /* REDIRECT */
 
             setTimeout(function(){
-
 
                 window.location.href =
                 "dashboard.html";
 
-
-            },800);
-
+            },1000);
 
 
         }
 
+
+        /* =================================
+           LOGIN FAILED
+        ================================= */
 
         else{
 
@@ -679,25 +757,59 @@ function(event){
 
 
             message.innerText =
+
+            data.message ||
+
             "Invalid username or password.";
 
 
-            button.disabled =
+            loginBtn.disabled =
             false;
 
 
-            button.innerText =
+            loginBtn.innerText =
             "Login";
 
 
         }
 
+    })
 
-    },800);
+
+    /* =====================================
+       CONNECTION ERROR
+    ===================================== */
+
+    .catch(function(error){
+
+
+        console.error(
+            "Login Error:",
+            error
+        );
+
+
+        message.className =
+        "message error";
+
+
+        message.innerText =
+
+        "Unable to connect to server. Please try again.";
+
+
+        loginBtn.disabled =
+        false;
+
+
+        loginBtn.innerText =
+        "Login";
+
+
+    });
 
 
 });
-
 
 </script>
 
